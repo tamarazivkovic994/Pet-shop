@@ -25,6 +25,7 @@ const Login = () => {
   const [formValue, setFormValue] = useState(initialState);
   const { loading, error } = useSelector((state) => ({ ...state.auth }));
   const { email, password } = formValue;
+  const { googleId } = formValue;
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
@@ -43,6 +44,9 @@ const Login = () => {
     setFormValue({ ...formValue, [name]: value });
   };
   const googleSuccess = (response) => {
+    if (email && password && googleId) {
+      dispatch(login({ formValue, navigate, toast }));
+    }
     console.log(response);
   };
   const googleFailure = (error) => {

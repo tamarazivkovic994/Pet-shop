@@ -2,11 +2,12 @@ import "./App.scss";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { useEffect } from "react";
-import { register, setUser } from "./redux/features/authSlice";
+import { setUser } from "./redux/features/authSlice";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Header from "./components/Header";
 import Contact from "./pages/Contact";
+
 
 function App() {
   const dispatch = useDispatch();
