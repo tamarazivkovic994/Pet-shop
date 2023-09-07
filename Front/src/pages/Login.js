@@ -8,12 +8,13 @@ import {
   MDBBtn,
   MDBSpinner,
   MDBContainer,
-  MDBCardHeader
+  MDBCardHeader,
 } from "mdb-react-ui-kit";
 import { Link, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { toast } from "react-toastify";
 import { login } from "../redux/features/authSlice";
+import { GoogleLogin } from "@react-oauth/google";
 
 const initialState = {
   email: "",
@@ -41,7 +42,9 @@ const Login = () => {
     let { name, value } = e.target;
     setFormValue({ ...formValue, [name]: value });
   };
-
+  const googleSuccess = (response) => {
+    console.log(response);
+  };
   const googleFailure = (error) => {
     toast.error(error);
   };
@@ -77,8 +80,8 @@ const Login = () => {
                 validation="Please enter your password!!!"
               ></MDBInput>
             </div>
-            <div className="col-12">
-              <MDBBtn style={{ width: "100%" }} className="mt-2">
+            <div className="col-md-12">
+              <MDBBtn className="mt-2">
                 {loading && (
                   <MDBSpinner
                     size="sm"
@@ -89,6 +92,17 @@ const Login = () => {
                 )}
                 Login
               </MDBBtn>
+            </div>
+            <div className="col-md-12 d-flex justify-content-center mt-3">
+              {loading && (
+                <MDBSpinner
+                  size="sm"
+                  role="status"
+                  tag="span"
+                  className="me-2"
+                />
+              )}
+              <GoogleLogin onSuccess={googleSuccess} onError={googleFailure} />
             </div>
           </MDBValidation>
         </MDBCardBody>
