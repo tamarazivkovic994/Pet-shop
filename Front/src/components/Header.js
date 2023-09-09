@@ -13,6 +13,7 @@ import {
   MDBIcon,
 } from "mdb-react-ui-kit";
 import img from "../img/pet shop.png";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default function Header() {
   const [showNav, setShowNav] = useState(false);
@@ -68,22 +69,30 @@ export default function Header() {
             <MDBNavbarItem>
               <MDBNavbarLink href="/contact">Contact</MDBNavbarLink>
             </MDBNavbarItem>
-            {user?.result?._id ? (
-              <MDBNavbarItem>
-                <MDBNavbarLink href="/login">
-                  <p className="header-text" onClick={() => handleLogout()}>
-                    {" "}
-                    Logout
-                  </p>
+            <div className="d-flex ms-auto">
+              {user?.result?._id ? (
+                <MDBNavbarItem>
+                  <MDBNavbarLink href="/login">
+                    <p className="header-text" onClick={() => handleLogout()}>
+                      {" "}
+                      Logout
+                    </p>
+                  </MDBNavbarLink>
+                </MDBNavbarItem>
+              ) : (
+                <MDBNavbarItem>
+                  <MDBNavbarLink className="header-text" href="/login">
+                    LogIn
+                  </MDBNavbarLink>
+                </MDBNavbarItem>
+              )}
+
+              <MDBNavbarItem className="d-flex shopping-cart">
+                <MDBNavbarLink href="/cart">
+                 Cart
                 </MDBNavbarLink>
               </MDBNavbarItem>
-            ) : (
-              <MDBNavbarItem>
-                <MDBNavbarLink className="header-text" href="/login">
-                  LogIn
-                </MDBNavbarLink>
-              </MDBNavbarItem>
-            )}
+            </div>
           </MDBNavbarNav>
         </MDBCollapse>
       </MDBContainer>
