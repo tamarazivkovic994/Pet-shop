@@ -21,7 +21,7 @@ const Contact = () => {
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
 
-    // Handle checkbox separately
+   
     if (type === "checkbox") {
       setFormData({
         ...formData,
