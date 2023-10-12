@@ -28,7 +28,7 @@ export default function Header() {
   return (
     <MDBNavbar expand="lg" light bgColor="light">
       <MDBContainer fluid>
-        <MDBNavbarBrand href="/home" className="icon-header">
+        <MDBNavbarBrand href="/" className="icon-header">
           <img
             src={img}
             alt="logo"
@@ -52,18 +52,23 @@ export default function Header() {
         <MDBCollapse navbar show={showNav}>
           <MDBNavbarNav>
             <MDBNavbarItem>
-              <MDBNavbarLink active aria-current="page" href="/home">
+              <MDBNavbarLink active href="/home">
                 Home
               </MDBNavbarLink>
             </MDBNavbarItem>
             <MDBNavbarItem>
-              <MDBNavbarLink active aria-current="page" href="/about">
-                Adopt
+              <MDBNavbarLink active href="/adoptme">
+                Adopt me 
               </MDBNavbarLink>
             </MDBNavbarItem>
             <MDBNavbarItem>
-              <MDBNavbarLink active aria-current="page" href="/shop">
+              <MDBNavbarLink active href="/shop">
                 Shop
+              </MDBNavbarLink>
+            </MDBNavbarItem>
+            <MDBNavbarItem>
+              <MDBNavbarLink active href="/happycorner">
+                Happy corner
               </MDBNavbarLink>
             </MDBNavbarItem>
             <MDBNavbarItem>

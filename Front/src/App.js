@@ -7,7 +7,7 @@ import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Header from "./components/Header";
 import Contact from "./pages/Contact";
-
+import Home from "./pages/Home";
 
 function App() {
   const dispatch = useDispatch();
@@ -20,12 +20,12 @@ function App() {
   return (
     <BrowserRouter>
       <div className="App">
-        <Header></Header>
+        <Header />
         <Routes>
-          {/* <Route path='/' element={<Home></Home>}></Route> */}
-          <Route path="/login" element={<Login></Login>}></Route>
-          <Route path="/register" element={<Register></Register>}></Route>
-          <Route path="/contact" element={<Contact />}></Route> 
+          <Route path="/" element={<Home />}></Route>
+          <Route path="/login" element={<Login />}></Route>
+          <Route path="/register" element={<Register />}></Route>
+          <Route path="/contact" element={<Contact />}></Route>
           {/* <Route path="*" element={<NotFound></NotFound>}></Route> */}
         </Routes>
       </div>
