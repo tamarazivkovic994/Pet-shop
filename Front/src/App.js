@@ -8,6 +8,8 @@ import Register from "./pages/Register";
 import Header from "./components/Header";
 import Contact from "./pages/Contact";
 import Home from "./pages/Home";
+import AdoptMe from "./pages/AdoptMe";
+import Footer from "./components/Footer";
 
 function App() {
   const dispatch = useDispatch();
@@ -23,11 +25,14 @@ function App() {
         <Header />
         <Routes>
           <Route path="/" element={<Home />}></Route>
+          {/* <Route path="/home" element={<Home />}></Route> */}
+          <Route path="/adoptme" element={<AdoptMe />}></Route>
           <Route path="/login" element={<Login />}></Route>
           <Route path="/register" element={<Register />}></Route>
           <Route path="/contact" element={<Contact />}></Route>
           {/* <Route path="*" element={<NotFound></NotFound>}></Route> */}
         </Routes>
+        <Footer />
       </div>
     </BrowserRouter>
   );

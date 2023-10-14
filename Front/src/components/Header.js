@@ -51,11 +51,11 @@ export default function Header() {
         </MDBNavbarToggler>
         <MDBCollapse navbar show={showNav}>
           <MDBNavbarNav>
-            <MDBNavbarItem>
+            {/* <MDBNavbarItem>
               <MDBNavbarLink active href="/home">
                 Home
               </MDBNavbarLink>
-            </MDBNavbarItem>
+            </MDBNavbarItem> */}
             <MDBNavbarItem>
               <MDBNavbarLink active href="/adoptme">
                 Adopt me 
