@@ -62,7 +62,7 @@ const Contact = () => {
   };
   return (
     <MDBContainer className="d-flex justify-content-center mt-3 container-contactForm">
-      <MDBCard alignment="center" className="card-holder">
+      <MDBCard alignment="center" className="card-holder contactForm">
         <h5>Contact Us</h5>
         <MDBCardBody>
           <MDBValidation onSubmit={handleSubmit} noValidate className="row g-3">
@@ -133,8 +133,6 @@ const Contact = () => {
           referrerpolicy="no-referrer-when-downgrade"
         ></iframe>
       </div>
-
-      
     </MDBContainer>
   );
 };
