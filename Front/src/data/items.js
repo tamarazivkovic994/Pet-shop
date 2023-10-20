@@ -168,4 +168,4 @@ const items = [
   }
 ];
 
-export default data;
+export default items;
