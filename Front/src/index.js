@@ -6,8 +6,6 @@ import store from "./redux/store";
 import "mdb-react-ui-kit/dist/css/mdb.min.css";
 import { GoogleOAuthProvider } from '@react-oauth/google';
 import "@fortawesome/fontawesome-free/css/all.min.css";
-// import "bootstrap-css-only/css/bootstrap.min.css";
-// import "mdbreact/dist/css/mdb.css";
 
 import { Provider } from "react-redux";
 
