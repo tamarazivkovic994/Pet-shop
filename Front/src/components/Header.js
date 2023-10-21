@@ -51,14 +51,9 @@ export default function Header() {
         </MDBNavbarToggler>
         <MDBCollapse navbar show={showNav}>
           <MDBNavbarNav>
-            {/* <MDBNavbarItem>
-              <MDBNavbarLink active href="/home">
-                Home
-              </MDBNavbarLink>
-            </MDBNavbarItem> */}
             <MDBNavbarItem>
               <MDBNavbarLink active href="/adoptme">
-                Adopt me 
+                Adopt me
               </MDBNavbarLink>
             </MDBNavbarItem>
             <MDBNavbarItem>
@@ -93,9 +88,7 @@ export default function Header() {
               )}
 
               <MDBNavbarItem className="d-flex shopping-cart">
-                <MDBNavbarLink href="/cart">
-                 Cart
-                </MDBNavbarLink>
+                <MDBNavbarLink href="/cart">Cart</MDBNavbarLink>
               </MDBNavbarItem>
             </div>
           </MDBNavbarNav>
