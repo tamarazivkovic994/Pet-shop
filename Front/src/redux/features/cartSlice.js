@@ -49,16 +49,6 @@ const cartSlice = createSlice({
     deleteAll(state, action) {
       state.cartItems = [];
     },
-    updateTitle(state, action) {
-      const id = action.payload.id;
-
-      state.cartItems = state.cartItems.map((elem) => {
-        if (id === elem.id) {
-          elem.title = action.payload.title;
-        }
-        return elem;
-      });
-    },
   },
 });
 
@@ -69,7 +59,6 @@ export const {
   decrementItem,
   deleteAll,
   deleteItem,
-  updateTitle,
 } = cartSlice.actions;
 
 export default cartSlice.reducer;
