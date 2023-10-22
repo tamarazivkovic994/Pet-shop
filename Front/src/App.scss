@@ -156,3 +156,26 @@ $lightBrown: #a49794;
 .carousel-img {
   border-radius: 20px;
 }
+
+//story scss
+.cardStory {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.cardImage {
+  width: 80%;
+  object-fit: cover;
+  height: 60%;
+  flex-shrink: 0;
+}
+.card-body-story {
+  flex:1;
+  display: flex;
+  flex-direction: column;
+}
+.card-text-story {
+ flex-grow: 1;
+ overflow: hidden;
+}

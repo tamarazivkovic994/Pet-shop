@@ -1,9 +1,7 @@
-// storiesData.js
-
 const storiesData = [
   {
     id: 1,
-    image: "https://via.placeholder.com/150", // Placeholder image
+    image: "./images/dog1.JPG", 
     name: "Buddy",
     age: "2 years",
     story:
@@ -12,7 +10,7 @@ const storiesData = [
   },
   {
     id: 2,
-    image: "https://via.placeholder.com/150", // Placeholder image
+    image: "./images/dog2.JPG", 
     name: "Luna",
     age: "3 years",
     story:
@@ -21,16 +19,16 @@ const storiesData = [
   },
   {
     id: 3,
-    image: "https://via.placeholder.com/150", // Placeholder image
-    name: "Bella",
-    age: "1 year",
+    image: "./images/dog10.JPG", 
+    name: "Oscar",
+    age: "7 years",
     story:
-      "Found in an abandoned warehouse, Bella is now the beloved guardian of her new family.",
-    contributor: "Martin Stern",
+      "Old soul Oscar proves that joy comes at any age, bringing wisdom and calm to his new home.",
+    contributor: "Gary T.",
   },
   {
     id: 4,
-    image: "https://via.placeholder.com/150", // Placeholder image
+    image: "./images/dog4.JPG", 
     name: "Max",
     age: "4 years",
     story:
@@ -39,7 +37,7 @@ const storiesData = [
   },
   {
     id: 5,
-    image: "https://via.placeholder.com/150", // Placeholder image
+    image: "./images/dog5.JPG", 
     name: "Charlie",
     age: "5 months",
     story:
@@ -48,7 +46,7 @@ const storiesData = [
   },
   {
     id: 6,
-    image: "https://via.placeholder.com/150", // Placeholder image
+    image: "./images/dog6.JPG", 
     name: "Milo",
     age: "6 years",
     story:
@@ -57,7 +55,7 @@ const storiesData = [
   },
   {
     id: 7,
-    image: "https://via.placeholder.com/150", // Placeholder image
+    image: "./images/dog7.JPG", 
     name: "Stella",
     age: "2 years",
     story:
@@ -66,7 +64,7 @@ const storiesData = [
   },
   {
     id: 8,
-    image: "https://via.placeholder.com/150", // Placeholder image
+    image: "./images/dog8.JPG", 
     name: "Cooper",
     age: "3 years",
     story:
@@ -75,7 +73,7 @@ const storiesData = [
   },
   {
     id: 9,
-    image: "https://via.placeholder.com/150", // Placeholder image
+    image: "./images/dog9.JPG", 
     name: "Daisy",
     age: "4 months",
     story:
@@ -84,12 +82,12 @@ const storiesData = [
   },
   {
     id: 10,
-    image: "https://via.placeholder.com/150", // Placeholder image
-    name: "Oscar",
-    age: "7 years",
+    image: "./images/dog3.JPG", 
+    name: "Bella",
+    age: "1 year",
     story:
-      "Old soul Oscar proves that joy comes at any age, bringing wisdom and calm to his new home.",
-    contributor: "Gary T.",
+      "Found in an abandoned warehouse, Bella is now the beloved guardian of her new family.",
+    contributor: "Martin Stern",
   },
 ];
 
