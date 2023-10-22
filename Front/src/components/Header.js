@@ -1,6 +1,7 @@
 import { useDispatch, useSelector } from "react-redux";
 import { setLogout } from "../redux/features/authSlice";
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import {
   MDBContainer,
   MDBNavbar,
@@ -14,11 +15,15 @@ import {
 } from "mdb-react-ui-kit";
 import img from "../img/pet shop.png";
 
-export default function Header() {
+export default function Header({cart}) {
   const [showNav, setShowNav] = useState(false);
   const dispatch = useDispatch();
+  const navigate = useNavigate();
   const handleLogout = () => {
     dispatch(setLogout());
+  };
+  const handleLogin = () => {
+    navigate.push("/shop");
   };
 
   const { user } = useSelector((state) => ({ ...state.auth }));
@@ -76,7 +81,11 @@ export default function Header() {
                 </MDBNavbarItem>
               ) : (
                 <MDBNavbarItem>
-                  <MDBNavbarLink className="header-text" href="/login">
+                  <MDBNavbarLink
+                    className="header-text"
+                    href="/login"
+                    onClick={() => handleLogin()}
+                  >
                     LogIn
                   </MDBNavbarLink>
                 </MDBNavbarItem>
@@ -90,9 +99,16 @@ export default function Header() {
                   </MDBNavbarLink>
                 </MDBNavbarItem>
               ) : null}
-              <MDBNavbarItem className="d-flex shopping-cart">
-                <MDBNavbarLink href="/cart">Cart</MDBNavbarLink>
-              </MDBNavbarItem>
+              {user?.result?._id ? (
+                <MDBNavbarItem className="d-flex shopping-cart">
+                  <MDBNavbarLink href="/cart">
+                    <i className="fas fa-shopping-cart"></i>
+                    {cart.length > 0 && (
+                      <span className="cart-count">{cart.length}</span>
+                    )}
+                  </MDBNavbarLink>
+                </MDBNavbarItem>
+              ) : null}
             </div>
           </MDBNavbarNav>
         </MDBCollapse>

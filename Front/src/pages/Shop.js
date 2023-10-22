@@ -2,7 +2,7 @@ import { MDBCardGroup, MDBCard, MDBBtn } from "mdb-react-ui-kit";
 import React, { useState } from "react";
 import items from "../data/items.json";
 
-const Shop = () => {
+const Shop = ({ cart, setCart }) => {
   const [searchQuery, setSearchQuery] = useState("");
   const [filteredItems, setFilteredItems] = useState(items);
 
@@ -12,6 +12,9 @@ const Shop = () => {
       item.name.toLowerCase().includes(query.toLowerCase())
     );
     setFilteredItems(filtered);
+  };
+  const handleAddToCart = (item) => {
+    setCart([...cart, item]);
   };
 
   return (
@@ -60,6 +63,7 @@ const Shop = () => {
                   <MDBBtn
                     className="d-flex justify-content-center m-1 btnCard"
                     color="btn btn-dark"
+                    onClick={() => handleAddToCart(item)}
                   >
                     Add to cart
                   </MDBBtn>

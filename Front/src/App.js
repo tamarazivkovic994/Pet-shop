@@ -1,7 +1,7 @@
 import "./App.scss";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { useDispatch } from "react-redux";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { setUser } from "./redux/features/authSlice";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
@@ -16,6 +16,7 @@ import HappyCorner from "./pages/HappyCorner";
 function App() {
   const dispatch = useDispatch();
   const user = JSON.parse(localStorage.getItem("profile"));
+  const [cart, setCart] = useState([]);
 
   useEffect(() => {
     dispatch(setUser(user));
@@ -24,16 +25,15 @@ function App() {
   return (
     <BrowserRouter>
       <div className="App">
-        <Header />
+        <Header cart={cart} setCart={setCart}/>
         <Routes>
           <Route path="/" element={<Home />}></Route>
-          {/* <Route path="/home" element={<Home />}></Route> */}
           <Route path="/adoptme" element={<AdoptMe />}></Route>
           <Route path="/login" element={<Login />}></Route>
           <Route path="/register" element={<Register />}></Route>
           <Route path="/contact" element={<Contact />}></Route>
-          <Route path="/shop" element={<Shop />}></Route>
-          <Route path="*" element={<HappyCorner />}></Route>
+          <Route path="/shop" element={<Shop cart={cart} setCart={setCart} />}></Route>
+          <Route path="/happycorner" element={<HappyCorner />}></Route>
           {/* <Route path="*" element={<NotFound></NotFound>}></Route> */}
         </Routes>
         <Footer />
