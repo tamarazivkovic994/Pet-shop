@@ -45,6 +45,12 @@ $lightBrown: #a49794;
     transform: rotate(360deg);
   }
 }
+.userName{
+ display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 2%;
+}
 .navbar {
   color: #c1424d;
   font-weight: bold;

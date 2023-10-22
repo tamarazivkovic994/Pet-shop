@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
 import { setLogout } from "../redux/features/authSlice";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import {
   MDBContainer,
@@ -23,7 +23,7 @@ export default function Header({ cart }) {
     dispatch(setLogout());
   };
   const handleLogin = () => {
-    navigate.push("/shop");
+    navigate("/shop");
   };
 
   const { user } = useSelector((state) => ({ ...state.auth }));
@@ -75,9 +75,7 @@ export default function Header({ cart }) {
             <div className="d-flex ms-auto">
               {user?.result?._id ? (
                 <MDBNavbarItem>
-                  <p className="header-text">
-                    Welcome, {user.result.firstName}
-                  </p>
+                  <p className="header-text userName">Welcome, {user?.result?.name.split(' ')[0]}</p>
                 </MDBNavbarItem>
               ) : (
                 <MDBNavbarItem>
