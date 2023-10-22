@@ -48,7 +48,7 @@ const Shop = () => {
               <MDBCard className="d-flex justify-content-center align-items-center cardItem">
                 <img
                   src={item.image}
-                  className="card-img-top m-1"
+                  className="card-img-top m-1 p-2 cardImage"
                   alt={item.name}
                 />
                 <div className="card-body">

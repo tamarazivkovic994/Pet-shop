@@ -17,7 +17,7 @@
     "id": 3,
     "name": "Colorful Parrot Swing Toy",
     "price": "$8.49",
-    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcStZ2HAvYqkOpSPBu24xto_LDSv7ZrMyM1AL5WnutSEEn1fA1s8JOkee9IXE39m9gc_WYI&usqp=CAU",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSiIYU4Mo3jyY4FPEgrc_Zk9cbUYKHFyXD_-ol0lmNCROiE8EUg8NbLchaqVdQgXxzlTdU&usqp=CAU",
     "details": "Vibrantly colored swing toy for your pet parrot's entertainment."
   },
   {
@@ -43,23 +43,23 @@
   },
   {
     "id": 7,
-    "name": "Cat Tower with Scratching Posts",
+    "name": "Cat Scratching Posts",
     "price": "$29.99",
-    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGTzpU_8kBv14OAirzVVI4t0axsRsCt9ZX3fmEfKspiAhjd12TNBpswIVTck-qI06nguI&usqp=CAU",
-    "details": "Multi-level cat tower with built-in scratching posts and cozy hideaways."
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKBDXnKE8uAg991SwbTGla1LHn84PRGfzbnfcfjPv-h8uNEfB2FUZ8Q8iF67vt_F7-obE&usqp=CAU",
+    "details": "Multi-level cat tower with built-in scratching posts."
   },
   {
     "id": 8,
     "name": "Dog Chew Toys",
     "price": "$12.99",
-    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEpTY4NQIm_kQuj31Bcf8yZ69XDnWWkXNfaouu5rXs4x2AoWFJcEj9o3n9C8UYXazxQ24&usqp=CAU",
-    "details": "Assorted chew toys to keep your dog entertained and promote dental health."
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvwEq6XQEB-u1YKM3nE_HVf5NuBVr8Dkety_-f_Gf_YsDyWl90DpTxZEDubihGfVZ4bSg&usqp=CAU",
+    "details": "Assorted chew toys to keep your dog entertained."
   },
   {
     "id": 9,
     "name": "Bird Seed Mix",
     "price": "$6.99",
-    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYockzRmBpSHqvNuDv7cFs-2FEjADHsGvtw8jpR66CwanTfGTLT2Gb1wcdv-eUahQapJU&usqp=CAU",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThvFy2dHR5-Dmt3B0ewrEBJuA0AjKYkKyTS-jYUn3WWKM6dABGQ7-ODvvgMvhbR141Vbc&usqp=CAU",
     "details": "Nutritious bird seed mix for a variety of bird species."
   },
   {
@@ -73,43 +73,43 @@
     "id": 11,
     "name": "Grain-Free Cat Food Salmon",
     "price": "$14.99",
-    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQ3LxB1zzNlSyAv20m3pP1N28cWsYIIyE1NKn2qnJyW6GIOhFqZEzUhBOJKqoNDD76Mpk&usqp=CAU",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSbAeZCXndapob8RonRMJntjnUxBieYw0hLpQ&usqp=CAU",
     "details": "High-quality grain-free cat food with real salmon for sensitive tummies."
   },
   {
     "id": 12,
     "name": "Puppy Food-Chicken & Rice",
     "price": "$17.99",
-    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdh05zhhevEl1EyPvpKwB-OizHwUNZNRKLcFiZtn4ldrL5Bet81F6eClojcaU9_dWZH1I&usqp=CAU",
-    "details": "Specially formulated puppy food with chicken and rice for healthy growth."
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFG_oEZXRrLtKYwH_8TrQO6vWYihg4MEk22Fse2k2DNr2DGbmLEAudFI-GRo64TzdW8II&usqp=CAU",
+    "details": "Specially formulated puppy food with chicken and rice."
   },
   {
     "id": 13,
     "name": "Senior Dog Food-Lamb & Brown Rice",
     "price": "$19.99",
-    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrmx5DIN6HRg4XGnrC7gvJO8MHeZ7RkCaBjE88W9pAHmKbs4sKv8bzkmS5kK0MA_wpS38&usqp=CAU",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTuJ24_cUMljZNfnCgXRLtumwtCV8qaCf1wgftplWZPlemzcC51wTEIJDv7S_g_p9pShco&usqp=CAU",
     "details": "Nutrient-rich senior dog food with lamb and brown rice for aging dogs."
   },
   {
     "id": 14,
     "name": "Organic Cat Treats (Tuna Flavor)",
     "price": "$3.99",
-    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtAMkkH_UGxMxNTxE6xkIxCkndFEqiypk6lwW8tiXXOljNdIfauvo-tBNLxrQJi3F40L0&usqp=CAU",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdq0Vc85jymoHa8W04vBOLs0s0bGp3xYrksCa-IF30n5VDHaJ4mnmSN_Vv4mTE3yaLDRs&usqp=CAU",
     "details": "Natural and organic tuna-flavored cat treats for a tasty snack."
   },
   {
     "id": 15,
-    "name": "Large Breed Dog Food (Beef)",
+    "name": "Large Breed Dog Food",
     "price": "$22.99",
-    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCVO9W9EqjgBvxAgx-ndYjmFNuhhds5Tu081UqtEd7cnEdpZS2E77VqNPJ0OHaEMw0eFE&usqp=CAU",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0ucPXk-o6L-jxToLALPb1YkrkcMcn7IFQvN-bNvMz0SmzYZtIdWRf1ihZXpUQykMu86g&usqp=CAU",
     "details": "Specially designed large breed dog food with real beef for strong muscles."
   },
   {
     "id": 16,
     "name": "Kitten Food (Turkey & Pea)",
     "price": "$16.99",
-    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0Q-e1BCL2K4_EpGyvKk_0tAfCZnULR1yyISigainKEPqBJ_f-oEXBPDpVwiwT1AIZGDI&usqp=CAU",
-    "details": "Nutrient-packed kitten food with turkey and peas for playful kittens."
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4QaI3WKdOkLJ9yR3nF53l9K6O35zJEh8jd5NQqyTaOWhcx4et3ujaE7G2xEpF6XM17F4&usqp=CAU",
+    "details": "Nutrient-packed kitten food with turkey and peas for playful and healthy kittens."
   },
   {
     "id": 17,
@@ -123,27 +123,27 @@
     "name": "Wild Bird Seed (5 lb)",
     "price": "$7.49",
     "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvELReaKBHSBtO-8w62huzgitSctk4j7sIkyLV0FunEMeGFsaWrBzh-E97ALJYTtbb9CU&usqp=CAU",
-    "details": "High-quality wild bird seed mix to attract a variety of wild birds to your yard."
+    "details": "High-quality wild bird mix to attract a variety of wild birds to your yard."
   },
   {
     "id": 19,
-    "name": "Cockatiel Treats (Fruit & Nut Blend)",
+    "name": "Cockatiel Treats",
     "price": "$5.99",
-    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-bJbqfdeHWMyKz4IzyPBNg5rk7tb4A9xHrfPx531wZxnZ77D59AudJ4wwXJxTd3HE6Ys&usqp=CAU",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEYsdgyO5mWd7KOVfSV9ZQqADb-5LwYFyuPEEHH-Jci6dG7p_D916DP6CWAkz6lkiMYYY&usqp=CAU",
     "details": "Delicious fruit and nut blend treats for cockatiels and small parrots."
   },
   {
     "id": 20,
-    "name": "Canary Songbird Food (2 lb)",
+    "name": "Canary Songbird Food",
     "price": "$6.99",
-    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTg4OWoVlimPPt2nxOn3n2tHnGE-V57g7ScduxffWHM_J--8yqJ2XQds76vaiT7UIbvpHU&usqp=CAU",
-    "details": "Specifically formulated food for canaries to enhance their singing abilities."
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCcqQXWAid5BAl21HeeKFt3mMcGf8kj8O6SbNhqp7cg1N7dv7gUEHEUdzhEwM3Za27AOk&usqp=CAU",
+    "details": "Specifically formulated food for canaries to enhance their singing."
   },
   {
     "id": 21,
     "name": "Finch Seed Mix (3 lb)",
     "price": "$4.99",
-    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0bRGlMg37IasqwBDWsPKrZjGm5IHmZRr7nn3DL63Zqd7SbcToIvzeHYDr82qQ-Y7e3W4&usqp=CAU",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSq_Zk9Cpc8ZDJbHp8PeZ-JOKeZAlFEkZFDvliS1X694P0jpZa3MjP7QxyX7I1j7qWchyw&usqp=CAU",
     "details": "Nutrient-rich seed mix for finches and other small birds."
   },
   {
@@ -157,14 +157,14 @@
     "id": 23,
     "name": "WOLFPACK Black Angus beef",
     "price": "$34.99",
-    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdGp_fUyGOFZroFHWuskb5hrvi4jfdkb5fgU0r1MwDY14ruSL7xtAlkqPHsr85MWKDleY&usqp=CAU",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYUO5_ydwIWXSvEs_FkBrJPLlH7rnVR6ZkqI79QIZoMK22z7wIWeClJvgKfSy1FV-IlNA&usqp=CAU",
     "details": "Built on principles of food for dogs and wolfs like in their natural habitat."
   },
   {
     "id": 24,
     "name": "BRIT Paté & Meat PUPPY",
     "price": "$8.99",
-    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7BNydSvQO2S2TMZ-N6klieoEQjsV8v1cecJ-zamppPUkUuidQGZsNvQinSxbtnco1xUg&usqp=CAU",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT39ujBzRaZr8Vu2qyXNQ4jIf8e5viQpe3nAHk_3DcckPneqvmYsYFkklAONP7Z4s5Uyz8&usqp=CAU",
     "details": "Best food for puppy's. Pure pate with salmon and turkey with no grains."
   }
 ]
