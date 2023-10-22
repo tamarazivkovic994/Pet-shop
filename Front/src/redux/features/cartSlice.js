@@ -10,13 +10,13 @@ const cartSlice = createSlice({
   initialState,
   reducers: {
     addItem(state, action) {
-      const id = action.payload.id;
-      const newItem = state.cartItems.find((elem) => elem.id === id);
-
-      if (newItem) {
-        newItem.quantity++;
+      const newItem = action.payload;
+      const existingItem = state.cartItems.find((item) => item.id === newItem.id);
+    
+      if (existingItem) {
+        existingItem.quantity++;
       } else {
-        state.cartItems.push(action.payload);
+        state.cartItems.push({ ...newItem, quantity: 1 });
       }
     },
     toggleCart(state, action) {

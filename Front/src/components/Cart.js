@@ -6,6 +6,7 @@ import { incrementItem, decrementItem, deleteItem } from "../redux/features/cart
 
 const Cart = () => {
   const cartItems = useSelector((state) => state.cart.cartItems);
+  console.log(cartItems);
   const dispatch = useDispatch();
   const navigate = useNavigate();
 

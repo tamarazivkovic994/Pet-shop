@@ -1,52 +1,60 @@
 import React, { useState } from "react";
-import Carousel from "react-bootstrap/Carousel";
+import { MDBCard, MDBCardGroup, MDBTypography } from "mdb-react-ui-kit";
+import stories from "../data/stories.js";
+import Carousel from 'react-bootstrap/Carousel';
 
-const data = [
-  {
-    image: require("../img/banner2.jpg"),
-    caption: "Archi and Don Vito",
-    description: "Enjoying the beatiful day at sea",
-  },
-  {
-    image: require("../img/banner3.jpg"),
-    caption: "Archibald",
-    description: "Fall has come and lets all have fun in the leaves",
-  },
-  {
-    image: require("../img/banner4.jpg"),
-    caption: "Arci and Don Vito",
-    description: "A perfect day for a walk in the park",
-  },
-];
+function Stories() {
 
-function HappyCorner() {
-  const [index, setIndex] = useState(0);
-  const handleSelect = (selectedIndex, e) => {
-    setIndex(selectedIndex);
-  };
-
+  const carouselInterval = 3000;
   return (
-    <Carousel
-      activeIndex={index}
-      onSelect={handleSelect}
-      className="mt-2 carousel"
-    >
-      {data.map((slide, i) => {
-        return (
-          <Carousel.Item>
-            <img
-              className="d-block w-100 carousel-img"
-              src={slide.image}
-              alt="slider image"
-            />
-            <Carousel.Caption>
-              <h3>{slide.caption}</h3>
-              <p>{slide.description}</p>
-            </Carousel.Caption>
+    <div>
+      <h1>Happy Adoption Stories</h1>
+      <Carousel interval={carouselInterval}>
+        {stories.map((story, index) => (
+          <Carousel.Item key={story.id}>
+            <div className="d-flex">
+              {/* Image part */}
+              <img
+                className="d-block w-50"
+                src={story.image}
+                alt={story.name}
+                style={{ objectFit: 'cover', maxHeight: '400px' }} // Adjust styles as needed
+              />
+
+              {/* Text part */}
+              <div className="d-flex flex-column justify-content-center w-50 p-4">
+                <h3>{story.name}, {story.age}</h3>
+                <p>{story.story}</p>
+                <p className="text-muted" style={{ fontStyle: 'italic' }}>
+                  - story by {story.contributor}
+                </p>
+              </div>
+            </div>
           </Carousel.Item>
-        );
-      })}
-    </Carousel>
+        ))}
+      </Carousel>
+      <MDBCardGroup className="m-3">
+        {stories.map((story) => (
+          <MDBCard className="m-2" key={story.id} style={{ flex: "1 0 21%" }}>
+            <img
+              src={story.image}
+              className="card-img-top m-1 p-2"
+              alt={story.name}
+            />
+            <div className="card-body">
+              <h5 className="card-title">{story.name}</h5>
+              <p className="card-text">
+                <small>Age: {story.age}</small>
+              </p>
+              <p className="card-text">{story.story}</p>
+              <MDBTypography tag="footer" className="blockquote-footer">
+                <i>Story by {story.contributor}</i>
+              </MDBTypography>
+            </div>
+          </MDBCard>
+        ))}
+      </MDBCardGroup>
+    </div>
   );
 }
-export default HappyCorner;
+export default Stories;
