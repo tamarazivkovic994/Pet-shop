@@ -53,7 +53,7 @@ const Shop = ({ cart, setCart }) => {
       <MDBCardGroup className="m-3 cardGroupShop">
         <div className="row">
           {filteredItems.slice(0, itemsToShow).map((item) => (
-            <div key={item.id} className="col-md-3">
+            <div key={item.id} className="col-md-3 d-flex align-items-stretch">
               <MDBCard className="d-flex justify-content-center align-items-center cardItem">
                 <img
                   src={item.image}
