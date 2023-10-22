@@ -58,6 +58,16 @@ $lightBrown: #a49794;
   top: 0;
   z-index: 999;
 }
+.scroll-btn {
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  opacity: 0.9;
+  color:#c1424d
+}
 .container {
   width: 100%;
 }

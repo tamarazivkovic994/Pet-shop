@@ -79,8 +79,8 @@ const Shop = ({ cart, setCart }) => {
           ))}
         </div>
         {itemsToShow < filteredItems.length && (
-          <div className="d-flex justify-content-center">
-            <MDBBtn className="btn btn-black" onClick={loadMore}>
+          <div className="d-flex justify-content-center mt-2">
+            <MDBBtn className="btn btn-dark" onClick={loadMore}>
               Load more
             </MDBBtn>
           </div>
