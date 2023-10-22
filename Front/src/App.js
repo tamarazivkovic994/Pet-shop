@@ -13,7 +13,7 @@ import AdoptMe from "./pages/AdoptMe";
 import Footer from "./components/Footer";
 import Shop from "./pages/Shop";
 import HappyCorner from "./pages/HappyCorner";
-import Cart from "./components/CartItem";
+import Cart from "./components/Cart";
 
 function App() {
   const dispatch = useDispatch();

@@ -8,7 +8,7 @@ import {
   updateTitle,
 } from "../redux/features/cartSlice";
 
-
+const Cart = () => {
   const { isCartOpen, cartItems } = useSelector((state) => state.cart);
   const dispatch = useDispatch();
 
@@ -52,7 +52,7 @@ import {
 
             <div className="cart_body">
               {cartQuantity === 0 ? (
-                <h2>Cart is empty</h2>
+                <h2>Nema nista u korpi!</h2>
               ) : (
                 <div>
                   {cartItems.map((item) => {
@@ -70,7 +70,7 @@ import {
                             className="inp"
                             id="inputTitle"
                             value={title}
-                            onBlur={(e) => handleUpdate(id, e.target.id)}
+                            onBlur={(e) => handleUpdate(id,e.target.id)}
                           ></input>
                         </div>
                         <div className="cart_item_price">{totalItem}$</div>

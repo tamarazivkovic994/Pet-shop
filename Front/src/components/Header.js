@@ -2,6 +2,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { setLogout } from "../redux/features/authSlice";
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import { toggleCart } from "../redux/features/cartSlice";
 import {
   MDBContainer,
   MDBNavbar,
@@ -24,6 +25,9 @@ export default function Header({ cart }) {
   };
   const handleLogin = () => {
     navigate("/shop");
+  };
+  const handleOpenCart = (open) => {
+    dispatch(toggleCart(open));
   };
 
   const { user } = useSelector((state) => ({ ...state.auth }));
@@ -99,7 +103,7 @@ export default function Header({ cart }) {
               ) : null}
               {user?.result?._id ? (
                 <MDBNavbarItem className="d-flex shopping-cart">
-                  <MDBNavbarLink href="/cart">
+                  <MDBNavbarLink href="/cart" onClick={()=>handleOpenCart(true)}>
                     <i className="fas fa-shopping-cart"></i>
                     {cart.length > 0 && (
                       <span className="cart-count">{cart.length}</span>
