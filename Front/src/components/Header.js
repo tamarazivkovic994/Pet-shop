@@ -15,7 +15,7 @@ import {
 } from "mdb-react-ui-kit";
 import img from "../img/pet shop.png";
 
-export default function Header({cart}) {
+export default function Header({ cart }) {
   const [showNav, setShowNav] = useState(false);
   const dispatch = useDispatch();
   const navigate = useNavigate();

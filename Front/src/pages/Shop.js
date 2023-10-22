@@ -1,10 +1,11 @@
-import { MDBCardGroup, MDBCard, MDBBtn } from "mdb-react-ui-kit";
 import React, { useState } from "react";
+import { MDBCardGroup, MDBCard, MDBBtn } from "mdb-react-ui-kit";
 import items from "../data/items.json";
 
 const Shop = ({ cart, setCart }) => {
   const [searchQuery, setSearchQuery] = useState("");
   const [filteredItems, setFilteredItems] = useState(items);
+  const [itemsToShow, setItemsToShow] = useState(8);
 
   const handleSearch = (query) => {
     setSearchQuery(query);
@@ -13,8 +14,13 @@ const Shop = ({ cart, setCart }) => {
     );
     setFilteredItems(filtered);
   };
+
   const handleAddToCart = (item) => {
     setCart([...cart, item]);
+  };
+
+  const loadMore = () => {
+    setItemsToShow((prevItems) => prevItems + 8);
   };
 
   return (
@@ -46,7 +52,7 @@ const Shop = ({ cart, setCart }) => {
       </div>
       <MDBCardGroup className="m-3 cardGroupShop">
         <div className="row">
-          {filteredItems.map((item) => (
+          {filteredItems.slice(0, itemsToShow).map((item) => (
             <div key={item.id} className="col-md-3">
               <MDBCard className="d-flex justify-content-center align-items-center cardItem">
                 <img
@@ -72,6 +78,13 @@ const Shop = ({ cart, setCart }) => {
             </div>
           ))}
         </div>
+        {itemsToShow < filteredItems.length && (
+          <div className="d-flex justify-content-center">
+            <MDBBtn className="btn btn-black" onClick={loadMore}>
+              Load more
+            </MDBBtn>
+          </div>
+        )}
       </MDBCardGroup>
     </div>
   );

@@ -12,6 +12,7 @@ import AdoptMe from "./pages/AdoptMe";
 import Footer from "./components/Footer";
 import Shop from "./pages/Shop";
 import HappyCorner from "./pages/HappyCorner";
+import Cart from "./components/CartItem";
 
 function App() {
   const dispatch = useDispatch();
@@ -33,6 +34,7 @@ function App() {
           <Route path="/register" element={<Register />}></Route>
           <Route path="/contact" element={<Contact />}></Route>
           <Route path="/shop" element={<Shop cart={cart} setCart={setCart} />}></Route>
+          <Route path="/cart" render={() => <Cart cart={cart} />} />
           <Route path="/happycorner" element={<HappyCorner />}></Route>
           {/* <Route path="*" element={<NotFound></NotFound>}></Route> */}
         </Routes>
