@@ -9,10 +9,9 @@ import Register from "./pages/Register";
 import Header from "./components/Header";
 import Contact from "./pages/Contact";
 import Home from "./pages/Home";
-import AdoptMe from "./pages/AdoptMe";
 import Footer from "./components/Footer";
 import Shop from "./pages/Shop";
-import HappyCorner from "./pages/HappyCorner";
+import Stories from "./pages/Stories";
 import Cart from "./components/Cart";
 
 function App() {
@@ -30,13 +29,12 @@ function App() {
         <Header cart={cart} setCart={setCart} />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/adoptme" element={<AdoptMe />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/shop" element={<Shop cart={cart} setCart={setCart} />} />
           <Route path="/cart" element={<Cart cart={cart} />} />
-          <Route path="/happycorner" element={<HappyCorner />} />
+          <Route path="/stories" element={<Stories />} />
         </Routes>
         <ScrollToTop smooth color="#bda8ad" className="scroll-btn mb-8" />
         <Footer />

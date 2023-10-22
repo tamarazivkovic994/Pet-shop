@@ -56,18 +56,13 @@ export default function Header({ cart }) {
         <MDBCollapse navbar show={showNav}>
           <MDBNavbarNav>
             <MDBNavbarItem>
-              <MDBNavbarLink active href="/adoptme">
-                Adopt me
-              </MDBNavbarLink>
-            </MDBNavbarItem>
-            <MDBNavbarItem>
               <MDBNavbarLink active href="/shop">
                 Shop
               </MDBNavbarLink>
             </MDBNavbarItem>
             <MDBNavbarItem>
-              <MDBNavbarLink active href="/happycorner">
-                Happy corner
+              <MDBNavbarLink active href="/stories">
+                Stories
               </MDBNavbarLink>
             </MDBNavbarItem>
             <MDBNavbarItem>
