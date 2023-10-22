@@ -52,6 +52,10 @@ const Login = () => {
   const googleFailure = (error) => {
     toast.error(error);
   };
+  const handleLogin = () => {
+    navigate("/shop");
+  }
+
 
   return (
     <MDBContainer className="d-flex justify-content-center mt-3 container">
@@ -85,7 +89,7 @@ const Login = () => {
               ></MDBInput>
             </div>
             <div className="col-md-12">
-              <MDBBtn className="mt-2">
+              <MDBBtn className="mt-2" onClick={() => handleLogin()}>
                 {loading && (
                   <MDBSpinner
                     size="sm"

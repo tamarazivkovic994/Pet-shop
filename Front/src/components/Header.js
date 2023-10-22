@@ -1,7 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
 import { setLogout } from "../redux/features/authSlice";
 import React, { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
 import { toggleCart } from "../redux/features/cartSlice";
 import {
   MDBContainer,
@@ -19,13 +18,11 @@ import img from "../img/pet shop.png";
 export default function Header({ cart }) {
   const [showNav, setShowNav] = useState(false);
   const dispatch = useDispatch();
-  const navigate = useNavigate();
+
   const handleLogout = () => {
     dispatch(setLogout());
   };
-  const handleLogin = () => {
-    navigate("/shop");
-  };
+
   const handleOpenCart = (open) => {
     dispatch(toggleCart(open));
   };
@@ -79,15 +76,13 @@ export default function Header({ cart }) {
             <div className="d-flex ms-auto">
               {user?.result?._id ? (
                 <MDBNavbarItem>
-                  <p className="header-text userName">Welcome, {user?.result?.name.split(' ')[0]}</p>
+                  <p className="header-text userName">
+                    Welcome, {user?.result?.name.split(" ")[0]}
+                  </p>
                 </MDBNavbarItem>
               ) : (
                 <MDBNavbarItem>
-                  <MDBNavbarLink
-                    className="header-text"
-                    href="/login"
-                    onClick={() => handleLogin()}
-                  >
+                  <MDBNavbarLink className="header-text" href="/login">
                     LogIn
                   </MDBNavbarLink>
                 </MDBNavbarItem>
@@ -103,7 +98,10 @@ export default function Header({ cart }) {
               ) : null}
               {user?.result?._id ? (
                 <MDBNavbarItem className="d-flex shopping-cart">
-                  <MDBNavbarLink href="/cart" onClick={()=>handleOpenCart(true)}>
+                  <MDBNavbarLink
+                    href="/cart"
+                    onClick={() => handleOpenCart(true)}
+                  >
                     <i className="fas fa-shopping-cart"></i>
                     {cart.length > 0 && (
                       <span className="cart-count">{cart.length}</span>

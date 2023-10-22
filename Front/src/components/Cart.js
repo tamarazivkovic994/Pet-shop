@@ -1,109 +1,78 @@
-import { useDispatch, useSelector } from "react-redux";
+import React from "react";
+import { MDBCard, MDBCardGroup, MDBBtn } from "mdb-react-ui-kit";
+import { useSelector, useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
 import {
-  decrementItem,
-  incrementItem,
   toggleCart,
-  deleteAll,
+  incrementItem,
+  decrementItem,
   deleteItem,
   updateTitle,
 } from "../redux/features/cartSlice";
 
 const Cart = () => {
-  const { isCartOpen, cartItems } = useSelector((state) => state.cart);
+  const cartItems = useSelector((state) => state.cart.cartItems);
   const dispatch = useDispatch();
-
-  const total = cartItems.reduce(
-    (acc, num) => acc + num.price * num.quantity,
-    0
-  );
-  const cartQuantity = cartItems.length;
-
-  const handleOpenCart = (open) => {
-    dispatch(toggleCart(open));
-  };
+  const navigate=useNavigate();
 
   const handleIncrement = (id) => {
     dispatch(incrementItem(id));
   };
+
   const handleDecrement = (id) => {
     dispatch(decrementItem(id));
   };
-  const handleDeleteItem = (id) => {
+
+  const handleDelete = (id) => {
     dispatch(deleteItem(id));
   };
-  const handleDeleteAll = () => {
-    dispatch(deleteAll());
+
+  const handleUpdateTitle = (id, title) => {
+    dispatch(updateTitle({ id, title }));
   };
-  const handleUpdate = (id) => {
-    dispatch(updateTitle(id, document.getElementById("inputTitle").value));
+  const handleCloseCart = () => {
+    dispatch(toggleCart(false));
+    navigate("/shop"); 
   };
 
   return (
-    <>
-      {isCartOpen && (
-        <div id="cart">
-          <div className="cart_content">
-            <div className="cart_head">
-              <h2>Cart</h2>
-              <div className="close_btn" onClick={() => handleOpenCart(false)}>
-                <span>&times;</span>
-              </div>
+    <div>
+      <h2>Your Cart</h2>
+      <MDBCardGroup className="m-3 cardGroupShop">
+        {cartItems.map((item) => (
+          <MDBCard key={item.id} className="d-flex justify-content-center align-items-center cardItem">
+            <img src={item.image} className="card-img-top m-1 p-2 cardImage" alt={item.name} />
+            <div className="card-body">
+              <h5 className="card-title">{item.name}</h5>
+              <p className="card-text">{item.details}</p>
+              <p className="card-text">Price: {item.price}</p>
+              <input
+                type="text"
+                placeholder="Update Title"
+                value={item.title}
+                onChange={(e) => handleUpdateTitle(item.id, e.target.value)}
+              />
             </div>
-
-            <div className="cart_body">
-              {cartQuantity === 0 ? (
-                <h2>Nema nista u korpi!</h2>
-              ) : (
-                <div>
-                  {cartItems.map((item) => {
-                    const { id, img, title, price, quantity } = item;
-                    const totalItem = quantity * price;
-
-                    return (
-                      <div className="cart-items" key={id}>
-                        <figure className="cart_img">
-                          <img src={img} alt={title} />
-                        </figure>
-                        <div className="cart_item_title">
-                          <input
-                            type="text"
-                            className="inp"
-                            id="inputTitle"
-                            value={title}
-                            onBlur={(e) => handleUpdate(id,e.target.id)}
-                          ></input>
-                        </div>
-                        <div className="cart_item_price">{totalItem}$</div>
-                        <div className="cart_item_quantity">
-                          <span onClick={() => handleIncrement(id)}>+</span>
-                          {quantity}
-
-                          <span onClick={() => handleDecrement(id)}>-</span>
-                        </div>
-                        <div>
-                          <button
-                            className="btn"
-                            onClick={() => handleDeleteItem(id)}
-                          >
-                            Delete
-                          </button>
-                        </div>
-                      </div>
-                    );
-                  })}
-                  <div className="btF">
-                    <button className="btn" onClick={handleDeleteAll}>
-                      Delete All
-                    </button>
-                  </div>
-                  <div className="total">{total}$</div>
-                </div>
-              )}
+            <div>
+              <MDBBtn className="d-flex justify-content-center m-1 btnCard" color="btn btn-dark" onClick={() => handleIncrement(item.id)}>
+                +
+              </MDBBtn>
+              <span>{item.quantity}</span>
+              <MDBBtn className="d-flex justify-content-center m-1 btnCard" color="btn btn-dark" onClick={() => handleDecrement(item.id)}>
+                -
+              </MDBBtn>
+              <MDBBtn className="d-flex justify-content-center m-1 btnCard" color="btn btn-danger" onClick={() => handleDelete(item.id)}>
+                Delete
+              </MDBBtn>
             </div>
-          </div>
-        </div>
-      )}
-    </>
+          </MDBCard>
+        ))}
+      </MDBCardGroup>
+      <MDBBtn onClick={() => handleCloseCart()} color="btn btn-dark">
+        Close Cart
+      </MDBBtn>
+    </div>
   );
 };
+
 export default Cart;
