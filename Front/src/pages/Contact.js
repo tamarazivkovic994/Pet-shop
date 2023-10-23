@@ -56,9 +56,9 @@ const Contact = () => {
     <MDBContainer className="d-flex justify-content-center mt-3 container-contactForm">
       <MDBCard alignment="center" className="card-holder contactForm">
         <h5>Contact Us</h5>
-        <MDBCardBody>
-          <MDBValidation onSubmit={handleSubmit} noValidate className="row g-3">
-            <div className="col-md-12">
+        <MDBCardBody className="card-body">
+          <MDBValidation onSubmit={handleSubmit} noValidate>
+            <div className="col-md-12 pb-3">
               <MDBInput
                 label="Name"
                 type="text"
@@ -69,7 +69,7 @@ const Contact = () => {
                 validation="Please provide a valid name"
               />
             </div>
-            <div className="col-md-12">
+            <div className="col-md-12 pb-3">
               <MDBInput
                 label="Email"
                 type="email"
@@ -80,7 +80,7 @@ const Contact = () => {
                 validation="Please provide a valid email"
               />
             </div>
-            <div className="col-md-12">
+            <div className="col-md-12 pb-3">
               <MDBTextArea
                 label="Message"
                 type="textarea"

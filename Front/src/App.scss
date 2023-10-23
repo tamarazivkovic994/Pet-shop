@@ -177,6 +177,41 @@ $lightBrown: #a49794;
   flex-grow: 1;
   overflow: hidden;
 }
-.carouselStory{
+.carouselStory {
   background-color: $babyPink;
+}
+
+//contact scss
+
+.contactForm{
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+container-contactForm {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+@media (max-width: 768px) {
+  .container-contactForm {
+    flex-direction: column;
+  }
+
+  .map-container {
+    width: 200px;
+    margin-top: 3%;
+
+    .map-container iframe {
+      width: 200px;
+    }
+
+    .contactForm {
+      width: 100%;
+    }
+  }
 }
