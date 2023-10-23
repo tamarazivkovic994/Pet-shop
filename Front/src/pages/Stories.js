@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { MDBCard, MDBCardGroup, MDBTypography } from "mdb-react-ui-kit";
 import stories from "../data/stories.js";
 import Carousel from "react-bootstrap/Carousel";

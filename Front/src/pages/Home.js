@@ -4,11 +4,11 @@ import {
   MDBCardBody,
   MDBCardTitle,
   MDBCardText,
-  MDBCardImage,
   MDBContainer,
   MDBRow,
   MDBCol,
 } from "mdb-react-ui-kit";
+import SendStory from "../components/SendStory";
 
 const Home = () => {
   return (
@@ -20,7 +20,10 @@ const Home = () => {
               <MDBCardTitle className="text-center">
                 Welcome to Tasha's Pet Shop
               </MDBCardTitle>
-              <MDBCardTitle className="text-center" style={{ fontSize: '1rem' }}>
+              <MDBCardTitle
+                className="text-center"
+                style={{ fontSize: "1rem" }}
+              >
                 Where Pet Dreams Come True!
               </MDBCardTitle>
             </MDBCardBody>
@@ -60,6 +63,13 @@ const Home = () => {
           emoji="🌟"
         />
       </MDBRow>
+
+      <MDBRow className="d-flex justify-content-md-center mb-4">
+        <MDBCol md="9">
+          <h2 className="text-center m-3">Send Us Your Story</h2>
+          <SendStory />
+        </MDBCol>
+      </MDBRow>
     </MDBContainer>
   );
 };
@@ -69,7 +79,9 @@ const ContentSection = ({ subtitle, text, emoji }) => {
     <MDBCol>
       <MDBCard className="h-100">
         <MDBCardBody>
-          <MDBCardTitle>{emoji} {subtitle}</MDBCardTitle>
+          <MDBCardTitle>
+            {emoji} {subtitle}
+          </MDBCardTitle>
           <MDBCardText>{text}</MDBCardText>
         </MDBCardBody>
       </MDBCard>

@@ -83,6 +83,7 @@ const Login = () => {
                     role="status"
                     tag="span"
                     className="me-2"
+                    validation="Wrong password or email!"
                   />
                 )}
                 Login
