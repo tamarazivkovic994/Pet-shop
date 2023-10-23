@@ -76,9 +76,12 @@ export default function Header({ cart }) {
                   </p>
                 </MDBNavbarItem>
               ) : (
-                <MDBNavbarItem>
+                <MDBNavbarItem className="d-flex justify-content-center ">
                   <MDBNavbarLink className="header-text" href="/login">
                     LogIn
+                  </MDBNavbarLink>
+                  <MDBNavbarLink className="header-text" href="/register">
+                    Register
                   </MDBNavbarLink>
                 </MDBNavbarItem>
               )}

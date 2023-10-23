@@ -3,28 +3,32 @@ import * as api from "../api";
 
 export const login = createAsyncThunk(
   "auth/login",
-  async ({ formValue }, { rejectWithValue }) => {
+  async ({ formValue, navigate, toast }, { rejectWithValue }) => {
     try {
       const response = await api.signIn(formValue);
+      toast.success("Login Successfully");
+      navigate("/shop");
       return response.data;
     } catch (err) {
-      return rejectWithValue(err.response.data);
+      return rejectWithValue(err.response.data || "Login Failed");
     }
   }
 );
 
 export const register = createAsyncThunk(
   "auth/register",
-  async ({ formValue }, { rejectWithValue }) => {
+  async ({ formValue, navigate, toast }, { rejectWithValue }) => {
     try {
-      console.log(formValue);
       const response = await api.signUp(formValue);
+      toast.success("Register Successfully");
+      navigate("/shop");
       return response.data;
     } catch (err) {
-      return rejectWithValue(err.response.data);
+      return rejectWithValue(err.response.data || "Register Failed");
     }
   }
 );
+
 
 const authSlice = createSlice({
   name: "auth",
@@ -38,8 +42,8 @@ const authSlice = createSlice({
       state.user = action.payload;
     },
     setLogout: (state, action) => {
-      state.user = null;
       localStorage.clear();
+      state.user = null;
     },
   },
   extraReducers: {
@@ -57,10 +61,8 @@ const authSlice = createSlice({
     },
     [register.pending]: (state, action) => {
       state.loading = true;
-      alert("test1");
     },
     [register.fulfilled]: (state, action) => {
-      alert("test2");
       state.loading = false;
       localStorage.setItem("profile", JSON.stringify({ ...action.payload }));
       state.user = action.payload;

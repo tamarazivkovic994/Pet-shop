@@ -37,6 +37,8 @@ const Login = () => {
     e.preventDefault();
     if (email && password) {
       dispatch(login({ formValue, navigate, toast }));
+    }else{
+      toast.error("Please fill in both fields!");
     }
   };
   const onInputChange = (e) => {
@@ -52,15 +54,11 @@ const Login = () => {
   const googleFailure = (error) => {
     toast.error(error);
   };
-  const handleLogin = () => {
-    navigate("/shop");
-  }
-
 
   return (
     <MDBContainer className="d-flex justify-content-center mt-3 container">
       <MDBCard alignment="center" className="card-holder">
-        <MDBCardHeader className="card-header">Member Login</MDBCardHeader>
+        <MDBCardHeader className="card-header">Login</MDBCardHeader>
 
         <MDBCardBody className="card-body">
           <MDBValidation onSubmit={handleSubmit}>
@@ -89,7 +87,7 @@ const Login = () => {
               ></MDBInput>
             </div>
             <div className="col-md-12">
-              <MDBBtn className="mt-2" onClick={() => handleLogin()}>
+              <MDBBtn className="mt-2">
                 {loading && (
                   <MDBSpinner
                     size="sm"
