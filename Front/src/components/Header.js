@@ -87,7 +87,7 @@ export default function Header({ cart }) {
               )}
               {user?.result?._id ? (
                 <MDBNavbarItem>
-                  <MDBNavbarLink href="/login">
+                  <MDBNavbarLink href="/">
                     <p className="header-text" onClick={() => handleLogout()}>
                       Logout
                     </p>
