@@ -90,7 +90,7 @@ const Login = () => {
             </div>
           </MDBValidation>
         </MDBCardBody>
-        <MDBCardFooter className="text-muted">
+        <MDBCardFooter className="text-muted cardFooter">
           Don't have an account? <Link to="/register">Register</Link>
         </MDBCardFooter>
       </MDBCard>

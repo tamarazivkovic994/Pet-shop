@@ -19,7 +19,7 @@ function Stories() {
                 style={{ objectFit: "cover", maxHeight: "500px" }}
               />
 
-              <div className="d-flex flex-column justify-content-center w-50 p-4">
+              <div className="d-flex flex-column justify-content-center w-50 p-4 carouselStory">
                 <h3>
                   {story.name}, {story.age}
                 </h3>
