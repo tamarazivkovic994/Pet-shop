@@ -1,5 +1,5 @@
 import "./App.scss";
-import { BrowserRouter, Route, Routes } from "react-router-dom"; // Import Link from react-router-dom
+import { BrowserRouter, Route, Routes } from "react-router-dom"; 
 import { useDispatch } from "react-redux";
 import { useEffect, useState } from "react";
 import { setUser } from "./redux/features/authSlice";

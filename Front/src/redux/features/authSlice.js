@@ -28,8 +28,6 @@ export const register = createAsyncThunk(
     }
   }
 );
-
-
 const authSlice = createSlice({
   name: "auth",
   initialState: {

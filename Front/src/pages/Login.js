@@ -14,7 +14,6 @@ import { Link, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { toast } from "react-toastify";
 import { login } from "../redux/features/authSlice";
-import { GoogleLogin } from "@react-oauth/google";
 
 const initialState = {
   email: "",
@@ -25,7 +24,6 @@ const Login = () => {
   const [formValue, setFormValue] = useState(initialState);
   const { loading, error } = useSelector((state) => ({ ...state.auth }));
   const { email, password } = formValue;
-  const { googleId } = formValue;
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
@@ -44,15 +42,6 @@ const Login = () => {
   const onInputChange = (e) => {
     let { name, value } = e.target;
     setFormValue({ ...formValue, [name]: value });
-  };
-  const googleSuccess = (response) => {
-    if (email && password && googleId) {
-      dispatch(login({ formValue, navigate, toast }));
-    }
-    console.log(response);
-  };
-  const googleFailure = (error) => {
-    toast.error(error);
   };
 
   return (
@@ -98,17 +87,6 @@ const Login = () => {
                 )}
                 Login
               </MDBBtn>
-            </div>
-            <div className="col-md-12 d-flex justify-content-center mt-3">
-              {loading && (
-                <MDBSpinner
-                  size="sm"
-                  role="status"
-                  tag="span"
-                  className="me-2"
-                />
-              )}
-              <GoogleLogin onSuccess={googleSuccess} onError={googleFailure} />
             </div>
           </MDBValidation>
         </MDBCardBody>
