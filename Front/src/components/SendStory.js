@@ -8,6 +8,7 @@ import {
   MDBBtn,
   MDBCard,
   MDBCardBody,
+  MDBTextArea,
 } from "mdb-react-ui-kit";
 
 const SendStory = () => {
@@ -97,7 +98,7 @@ const SendStory = () => {
                   />
                 </div>
                 <div className="mb-3">
-                  <MDBInput
+                  <MDBTextArea
                     type="textarea"
                     label="Your Message"
                     name="message"
