@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import emailjs from "emailjs-com";
+import emailjs from "@emailjs/browser";
 import {
   MDBContainer,
   MDBInput,
@@ -15,39 +15,29 @@ const Contact = () => {
     name: "",
     email: "",
     message: "",
-    notARobot: false,
   });
 
   const handleChange = (e) => {
-    const { name, value, type, checked } = e.target;
-
-    if (type === "checkbox") {
-      setFormData({
-        ...formData,
-        [name]: checked,
-      });
-    } else {
-      setFormData({
-        ...formData,
-        [name]: value,
-      });
-    }
+    const { name, value } = e.target;
+    setFormData({
+      ...formData,
+      [name]: value,
+    });
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    if (!formData.notARobot) {
-      alert("Please confirm that you are not a robot.");
-      return;
-    }
-
     emailjs
-      .send("tasha994", "template_tasha994", formData, "oVvF4HP--JzB2gA0Y")
+      .send("tasha994", "template_tasha994", formData, "nX-0GMmHiMZ8XoG_N")
       .then(
         (response) => {
-          console.log("Email sent successfully:", response);
-          alert("Email sent successfully");
+          console.log(
+            "Email sent successfully:",
+            response.status,
+            response.text
+          );
+          alert("Email sent successfully!");
           setFormData({
             name: "",
             email: "",
@@ -55,8 +45,10 @@ const Contact = () => {
           });
         },
         (error) => {
-          console.error("Email could not be sent:", error);
-          alert("Email could not be sent");
+          console.error("Failed to send the email: ", error);
+          alert(
+            "An error occurred while sending the email. Please try again later."
+          );
         }
       );
   };
@@ -100,21 +92,7 @@ const Contact = () => {
                 rows={4}
               />
             </div>
-            <div className="col-md-12">
-              <div className="d-flex form-check">
-                <input
-                  className="form-check-input"
-                  type="checkbox"
-                  checked={formData.notARobot}
-                  name="notARobot"
-                  onChange={handleChange}
-                  id="notARobot"
-                />
-                <label className="form-check-label" htmlFor="notARobot">
-                  I am not a robot
-                </label>
-              </div>
-            </div>
+
             <div className="col-12">
               <MDBBtn type="submit" className="btn btn-primary">
                 Submit
