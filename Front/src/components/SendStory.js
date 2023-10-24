@@ -12,7 +12,7 @@ import {
 } from "mdb-react-ui-kit";
 
 const SendStory = () => {
-  const [contactDetails, setContactDetails] = useState({
+  const [formData, setFormData] = useState({
     name: "",
     email: "",
     file: null,
@@ -22,24 +22,16 @@ const SendStory = () => {
   const sendEmail = (e) => {
     e.preventDefault();
 
-    const formData = new FormData();
-    formData.append("name", contactDetails.name);
-    formData.append("email", contactDetails.email);
-    formData.append("message", contactDetails.message);
-    if (contactDetails.file) {
-      formData.append("file", contactDetails.file, contactDetails.file.name);
-    }
-
     emailjs
-      .send("tasha994", "template_tasha994", formData, "nX-0GMmHiMZ8XoG_N")
+      .send("tasha994", "template_26wojxx", formData, "nX-0GMmHiMZ8XoG_N")
       .then(
         (response) => {
           console.log("SUCCESS!", response.status, response.text);
           alert("Your message has been sent successfully!");
-          setContactDetails({
+          setFormData({
             name: "",
             email: "",
-            file: null,
+            file: "",
             message: "",
           });
         },
@@ -52,11 +44,12 @@ const SendStory = () => {
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
-    setContactDetails({ ...contactDetails, [name]: value });
+    setFormData({ ...formData, [name]: value });
   };
 
   const handleFileChange = (e) => {
-    setContactDetails({ ...contactDetails, file: e.target.files[0] });
+    const file = e.target.files[0];
+    setFormData({ ...formData, file: file });
   };
 
   return (
@@ -71,7 +64,7 @@ const SendStory = () => {
                     label="Your Name"
                     name="name"
                     type="text"
-                    value={contactDetails.name}
+                    value={formData.name}
                     onChange={handleInputChange}
                     required
                   />
@@ -81,7 +74,7 @@ const SendStory = () => {
                     label="Your Email"
                     name="email"
                     type="email"
-                    value={contactDetails.email}
+                    value={formData.email}
                     onChange={handleInputChange}
                     required
                   />
@@ -94,6 +87,7 @@ const SendStory = () => {
                     className="form-control"
                     type="file"
                     id="formFile"
+                    value={formData.file}
                     onChange={handleFileChange}
                   />
                 </div>
@@ -102,7 +96,7 @@ const SendStory = () => {
                     type="textarea"
                     label="Your Message"
                     name="message"
-                    value={contactDetails.message}
+                    value={formData.message}
                     onChange={handleInputChange}
                     required
                   />
