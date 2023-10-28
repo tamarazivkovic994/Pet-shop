@@ -1,58 +1,19 @@
+// Variables
 $LightBackground: #e8f0f1;
 $red: #c1424d;
 $babyPink: #bda8ad;
 $lightBrown: #a49794;
+
+// Global styles
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-.App {
-  text-align: center;
-}
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-.userName {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-right: 2%;
-}
+// Header styles
 .navbar {
-  color: #c1424d;
+  color: $red;
   font-weight: bold;
   font-size: 16px;
   display: flex;
@@ -64,6 +25,49 @@ $lightBrown: #a49794;
   top: 0;
   z-index: 999;
 }
+
+// Main App styling
+.App {
+  text-align: center;
+
+  &-logo {
+    height: 40vmin;
+    pointer-events: none;
+  }
+
+  &-header {
+    background-color: #282c34;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+  }
+
+  &-link {
+    color: #61dafb;
+  }
+}
+
+// Animation
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+// Common components
 .scroll-btn {
   border-radius: 50%;
   display: flex;
@@ -72,8 +76,29 @@ $lightBrown: #a49794;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
   opacity: 0.9;
-  color: #c1424d;
+  color: $red;
 }
+
+.cart-count {
+  position: absolute;
+  top: 30px;
+  right: 8px;
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  padding: 2px 5px;
+  font-size: 10px;
+}
+
+// User specific components
+.userName {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 2%;
+}
+
+// Container
 .container {
   width: 100%;
   margin-top: 2%;
@@ -88,45 +113,32 @@ $lightBrown: #a49794;
   background-color: $LightBackground;
 }
 
-.card-body {
-  background-color: $LightBackground;
-}
-
-.cart-count {
-  position: absolute;
-  top: 30px;
-  right: 8px;
-  background-color: red;
-  color: white;
-  border-radius: 50%;
-  padding: 2px 5px;
-  font-size: 10px;
-}
-//home page scss
-
+// Home page specific styles
 .textContainer {
   background-color: #367d87;
 }
+
 .cardText {
   display: flex;
   font-weight: bold;
   text-align: center;
   margin: 0 auto;
 }
+
 .carousel {
   width: 100%;
   height: 100%;
   margin: 0 auto;
 }
 
-//card scss
-
+// Card component styles
 .cardGroupShop {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
+
 .cardItem {
   width: 90%;
   height: 100%;
@@ -136,54 +148,52 @@ $lightBrown: #a49794;
   flex-direction: column;
   justify-content: space-between;
 }
+
 .cardImage {
   width: 80%;
   border-radius: 20px;
   object-fit: cover;
 }
+
 .card-body {
   display: flex;
   flex-direction: column;
+  background-color: $LightBackground;
 }
+
 .card-text {
   text-align: center;
 }
-.carousel {
-  width: 90%;
-}
+
 .carousel-img {
   border-radius: 20px;
 }
 
-//story scss
+// Story component styles
 .cardStory {
   display: flex;
   height: 100%;
   flex-direction: column;
   justify-content: space-between;
 }
-.cardImage {
-  width: 80%;
-  object-fit: cover;
-  height: 60%;
-  flex-shrink: 0;
-}
+
 .card-body-story {
   flex: 1;
   display: flex;
   flex-direction: column;
   background-color: $babyPink;
 }
+
 .card-text-story {
   flex-grow: 1;
   overflow: hidden;
 }
+
 .carouselStory {
   background-color: $babyPink;
 }
 
-//contact scss
-
+// Contact page specific styles
 .contactForm {
   width: 100%;
   margin: 0 auto;
@@ -191,13 +201,30 @@ $lightBrown: #a49794;
   flex-wrap: wrap;
   justify-content: center;
 }
-container-contactForm {
+
+.container-contactForm {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   gap: 20px;
 }
+
+.video-responsive {
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  position: relative;
+  height: 0;
+
+  iframe {
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+  }
+}
+
 @media (max-width: 768px) {
   .container-contactForm {
     flex-direction: column;
@@ -207,27 +234,12 @@ container-contactForm {
     width: 200px;
     margin-top: 3%;
 
-    .map-container iframe {
+    iframe {
       width: 200px;
     }
-
-    .contactForm {
-      width: 100%;
-    }
   }
-}
 
-.video-responsive {
-  overflow: hidden;
-  padding-bottom: 56.25%;
-  position: relative;
-  height: 0;
-}
-
-.video-responsive iframe {
-  left: 0;
-  top: 0;
-  height: 100%;
-  width: 100%;
-  position: absolute;
+  .contactForm {
+    width: 100%;
+  }
 }
