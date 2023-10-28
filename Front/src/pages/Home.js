@@ -7,7 +7,9 @@ import {
   MDBContainer,
   MDBRow,
   MDBCol,
+  MDBBtn,
 } from "mdb-react-ui-kit";
+import { FaInstagram } from 'react-icons/fa';
 import SendStory from "../components/SendStory";
 
 const Home = () => {
@@ -43,7 +45,7 @@ const Home = () => {
           emoji="🐶🐱🐰🐢🐦🐠"
         />
         <ContentSection
-          subtitle="Pet Products Galore"
+          subtitle="Pet Products"
           text="Our store is stocked with high-quality pet supplies. We believe that a pampered pet is a happy pet!"
           emoji="🌈"
         />
@@ -61,6 +63,7 @@ const Home = () => {
           subtitle="Join Tasha's Pet Shop Family Today!"
           text="We're here to support you every step of the way. Let's make pet dreams come true together!"
           emoji="🌟"
+          instagramBtn={true}
         />
       </MDBRow>
 
@@ -74,7 +77,7 @@ const Home = () => {
   );
 };
 
-const ContentSection = ({ subtitle, text, emoji }) => {
+const ContentSection = ({ subtitle, text, emoji, instagramBtn }) => {
   return (
     <MDBCol>
       <MDBCard className="h-100">
@@ -83,6 +86,13 @@ const ContentSection = ({ subtitle, text, emoji }) => {
             {emoji} {subtitle}
           </MDBCardTitle>
           <MDBCardText>{text}</MDBCardText>
+          {
+             instagramBtn && (
+              <MDBBtn href="https://www.instagram.com/all_about_doggos_/" target="_blank" color="pink" className="mt-2">
+                <FaInstagram /> Join us on Instagram
+              </MDBBtn>
+            )
+          }
         </MDBCardBody>
       </MDBCard>
     </MDBCol>
