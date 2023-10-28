@@ -1,5 +1,7 @@
 import "./App.scss";
-import { BrowserRouter, Route, Routes } from "react-router-dom"; 
+import { Provider } from "react-redux";
+import store from "./redux/store";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { useEffect, useState } from "react";
 import { setUser } from "./redux/features/authSlice";
@@ -24,22 +26,27 @@ function App() {
   }, []);
 
   return (
-    <BrowserRouter>
-      <div className="App">
-        <Header cart={cart} setCart={setCart} />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/register" element={<Register />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/shop" element={<Shop cart={cart} setCart={setCart} />} />
-          <Route path="/cart" element={<Cart cart={cart} />} />
-          <Route path="/stories" element={<Stories />} />
-        </Routes>
-        <ScrollToTop smooth color="#bda8ad" className="scroll-btn mb-8" />
-        <Footer />
-      </div>
-    </BrowserRouter>
+    <Provider store={store}>
+      <BrowserRouter>
+        <div className="App">
+          <Header cart={cart} setCart={setCart} />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/register" element={<Register />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route
+              path="/shop"
+              element={<Shop cart={cart} setCart={setCart} />}
+            />
+            <Route path="/cart" element={<Cart cart={cart} />} />
+            <Route path="/stories" element={<Stories />} />
+          </Routes>
+          <ScrollToTop smooth color="#bda8ad" className="scroll-btn mb-8" />
+          <Footer />
+        </div>
+      </BrowserRouter>
+    </Provider>
   );
 }
 

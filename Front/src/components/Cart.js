@@ -26,7 +26,6 @@ const Cart = () => {
     navigate("/shop");
   };
 
-  // Calculate the total cost of the cart items
   const totalCost = cartItems.reduce((total, item) => total + item.price * item.quantity, 0);
 
   return (
