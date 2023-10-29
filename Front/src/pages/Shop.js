@@ -66,7 +66,7 @@ const Shop = () => {
                 <div className="card-body">
                   <h5 className="card-title">{item.name}</h5>
                   <p className="card-text">{item.details}</p>
-                  <p className="card-text">Price: {item.price}</p>
+                  <p className="card-text">Price: ${item.price}</p>
                 </div>
                 <div>
                   <MDBBtn

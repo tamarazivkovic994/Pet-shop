@@ -34,10 +34,14 @@ const Cart = () => {
     navigate("/shop");
   };
 
-  const totalCost = cartItem.reduce(
-    (acc, num) => acc + num.price * num.quantity,
-    0
-  );
+  const totalCost = cartItem.reduce((total, item) => {
+    const price = Number(item.price);
+    const quantity = Number(item.quantity);
+    if (!isNaN(price) && !isNaN(quantity)) {
+      return total + price * quantity;
+    }
+    return total;
+  }, 0);
   console.log(totalCost);
 
   return (
@@ -87,7 +91,7 @@ const Cart = () => {
             ))}
           </MDBRow>
           <div className="total-amount d-flex justify-content-center m-3 p-3 gap-2">
-            <h4>Total Amount: ${totalCost.toFixed(2)}</h4>
+            <p className="card-text">Price: ${totalCost.toFixed(2)}</p>
             <MDBBtn onClick={handleDeleteAll} color="dark">
               Delete All
             </MDBBtn>

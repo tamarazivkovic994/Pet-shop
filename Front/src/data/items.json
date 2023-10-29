@@ -2,168 +2,168 @@
   {
     "id": 1,
     "name": "Catnip Toy",
-    "price": "$5.99",
+    "price": 5.99,
     "image": "https://m.media-amazon.com/images/I/71eYpjdkSPL.__AC_SX300_SY300_QL70_FMwebp_.jpg",
     "details": "Interactive catnip toy for hours of feline fun."
   },
   {
     "id": 2,
     "name": "Premium Dog Food",
-    "price": "$15.99",
+    "price": 15.99,
     "image": "https://i5.walmartimages.com/seo/IAMS-ADVANCED-HEALTH-Healthy-Digestion-Chicken-Whole-Grain-Flavor-Dry-Dog-Food-for-Adult-Dog-13-5-lb-bag_181d5bd3-354d-4786-b325-e0733ecfe69b.545027f12d339e293a7c1ec6156805ba.jpeg?odnHeight=640&odnWidth=640&odnBg=FFFFFF",
     "details": "High-quality dog food with real chicken for optimum nutrition."
   },
   {
     "id": 3,
     "name": "Colorful Parrot Swing Toy",
-    "price": "$8.49",
+    "price": 8.49,
     "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSiIYU4Mo3jyY4FPEgrc_Zk9cbUYKHFyXD_-ol0lmNCROiE8EUg8NbLchaqVdQgXxzlTdU&usqp=CAU",
     "details": "Vibrantly colored swing toy for your pet parrot's entertainment."
   },
   {
     "id": 4,
     "name": "Cat Litter Box with Scoop",
-    "price": "$19.99",
+    "price": 19.99,
     "image": "https://m.media-amazon.com/images/I/81cCNhG+zOL._AC_SX679_.jpg",
     "details": "Easy-to-clean litter box with a convenient scoop for cat owners."
   },
   {
     "id": 5,
     "name": "Dog Grooming Brush",
-    "price": "$7.99",
+    "price": 7.99,
     "image": "https://m.media-amazon.com/images/I/41iA2Z29chL._SX300_SY300_QL70_FMwebp_.jpg",
     "details": "Durable brush for removing loose fur and keeping your dog's coat healthy."
   },
   {
     "id": 6,
     "name": "Bird Cage-Large",
-    "price": "$45.99",
+    "price": 45.99,
     "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBFA1NBDWaZ3q9L4MLZGR6gqHLGBAgdFZ99t0yQVBZBvpvpte31jIfQuFLyDVRNsSakRU&usqp=CAU",
     "details": "Spacious bird cage suitable for small to medium-sized birds."
   },
   {
     "id": 7,
     "name": "Cat Scratching Posts",
-    "price": "$29.99",
+    "price": 29.99,
     "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKBDXnKE8uAg991SwbTGla1LHn84PRGfzbnfcfjPv-h8uNEfB2FUZ8Q8iF67vt_F7-obE&usqp=CAU",
     "details": "Multi-level cat tower with built-in scratching posts."
   },
   {
     "id": 8,
     "name": "Dog Chew Toys",
-    "price": "$12.99",
+    "price": 12.99,
     "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvwEq6XQEB-u1YKM3nE_HVf5NuBVr8Dkety_-f_Gf_YsDyWl90DpTxZEDubihGfVZ4bSg&usqp=CAU",
     "details": "Assorted chew toys to keep your dog entertained."
   },
   {
     "id": 9,
     "name": "Bird Seed Mix",
-    "price": "$6.99",
+    "price": 6.99,
     "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThvFy2dHR5-Dmt3B0ewrEBJuA0AjKYkKyTS-jYUn3WWKM6dABGQ7-ODvvgMvhbR141Vbc&usqp=CAU",
     "details": "Nutritious bird seed mix for a variety of bird species."
   },
   {
     "id": 10,
     "name": "Cat Collar with Bell",
-    "price": "$3.49",
+    "price": 3.49,
     "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLE4biVRTgK9V0PSoBQYuEyZFlnCr4mELK-uAgAI4aJXQT1kWbTZqGRvksHQbdXdVyICs&usqp=CAU",
     "details": "Adjustable cat collar with a jingle bell for added safety."
   },
   {
     "id": 11,
     "name": "Grain-Free Cat Food Salmon",
-    "price": "$14.99",
+    "price": 14.99,
     "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSbAeZCXndapob8RonRMJntjnUxBieYw0hLpQ&usqp=CAU",
     "details": "High-quality grain-free cat food with real salmon for sensitive tummies."
   },
   {
     "id": 12,
     "name": "Puppy Food-Chicken & Rice",
-    "price": "$17.99",
+    "price": 17.99,
     "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFG_oEZXRrLtKYwH_8TrQO6vWYihg4MEk22Fse2k2DNr2DGbmLEAudFI-GRo64TzdW8II&usqp=CAU",
     "details": "Specially formulated puppy food with chicken and rice."
   },
   {
     "id": 13,
     "name": "Senior Dog Food-Lamb & Brown Rice",
-    "price": "$19.99",
+    "price": 19.99,
     "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTuJ24_cUMljZNfnCgXRLtumwtCV8qaCf1wgftplWZPlemzcC51wTEIJDv7S_g_p9pShco&usqp=CAU",
     "details": "Nutrient-rich senior dog food with lamb and brown rice for aging dogs."
   },
   {
     "id": 14,
     "name": "Organic Cat Treats (Tuna Flavor)",
-    "price": "$3.99",
+    "price": 3.99,
     "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdq0Vc85jymoHa8W04vBOLs0s0bGp3xYrksCa-IF30n5VDHaJ4mnmSN_Vv4mTE3yaLDRs&usqp=CAU",
     "details": "Natural and organic tuna-flavored cat treats for a tasty snack."
   },
   {
     "id": 15,
     "name": "Large Breed Dog Food",
-    "price": "$22.99",
+    "price": 22.99,
     "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0ucPXk-o6L-jxToLALPb1YkrkcMcn7IFQvN-bNvMz0SmzYZtIdWRf1ihZXpUQykMu86g&usqp=CAU",
     "details": "Specially designed large breed dog food with real beef for strong muscles."
   },
   {
     "id": 16,
     "name": "Kitten Food (Turkey & Pea)",
-    "price": "$16.99",
+    "price": 16.99,
     "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4QaI3WKdOkLJ9yR3nF53l9K6O35zJEh8jd5NQqyTaOWhcx4et3ujaE7G2xEpF6XM17F4&usqp=CAU",
     "details": "Nutrient-packed kitten food with turkey and peas for playful and healthy kittens."
   },
   {
     "id": 17,
     "name": "Parrot Pellets (Tropical Mix)",
-    "price": "$9.99",
+    "price": 9.99,
     "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-Y2Dm0xh1DlbWdFHxG5XB9-EWosdHLX6O6N3GMQK0KirQ1-HNIEzOnZR6nbBXo0XN_Xc&usqp=CAU",
     "details": "Nutrient-rich tropical mix pellets for parrots and other tropical birds."
   },
   {
     "id": 18,
     "name": "Wild Bird Seed (5 lb)",
-    "price": "$7.49",
+    "price": 7.49,
     "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvELReaKBHSBtO-8w62huzgitSctk4j7sIkyLV0FunEMeGFsaWrBzh-E97ALJYTtbb9CU&usqp=CAU",
     "details": "High-quality wild bird mix to attract a variety of wild birds to your yard."
   },
   {
     "id": 19,
     "name": "Cockatiel Treats",
-    "price": "$5.99",
+    "price": 5.99,
     "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEYsdgyO5mWd7KOVfSV9ZQqADb-5LwYFyuPEEHH-Jci6dG7p_D916DP6CWAkz6lkiMYYY&usqp=CAU",
     "details": "Delicious fruit and nut blend treats for cockatiels and small parrots."
   },
   {
     "id": 20,
     "name": "Canary Songbird Food",
-    "price": "$6.99",
+    "price": 6.99,
     "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCcqQXWAid5BAl21HeeKFt3mMcGf8kj8O6SbNhqp7cg1N7dv7gUEHEUdzhEwM3Za27AOk&usqp=CAU",
     "details": "Specifically formulated food for canaries to enhance their singing."
   },
   {
     "id": 21,
     "name": "Finch Seed Mix (3 lb)",
-    "price": "$4.99",
+    "price": 4.99,
     "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSq_Zk9Cpc8ZDJbHp8PeZ-JOKeZAlFEkZFDvliS1X694P0jpZa3MjP7QxyX7I1j7qWchyw&usqp=CAU",
     "details": "Nutrient-rich seed mix for finches and other small birds."
   },
   {
     "id": 22,
     "name": "Parakeet Pellets (Variety Pack)",
-    "price": "$8.99",
+    "price": 8.99,
     "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOTrfWgqCMMXO30nbS7qpvwAzONG60qfK6RGFkJxJoaoOrVCVB5c8ZrA92MvJfCXyzR5c&usqp=CAU",
     "details": "Variety pack of pellets designed for the dietary needs of parakeets."
   },
   {
     "id": 23,
     "name": "WOLFPACK Black Angus beef",
-    "price": "$34.99",
+    "price": 34.99,
     "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYUO5_ydwIWXSvEs_FkBrJPLlH7rnVR6ZkqI79QIZoMK22z7wIWeClJvgKfSy1FV-IlNA&usqp=CAU",
     "details": "Built on principles of food for dogs and wolfs like in their natural habitat."
   },
   {
     "id": 24,
     "name": "BRIT Paté & Meat PUPPY",
-    "price": "$8.99",
+    "price": 8.99,
     "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT39ujBzRaZr8Vu2qyXNQ4jIf8e5viQpe3nAHk_3DcckPneqvmYsYFkklAONP7Z4s5Uyz8&usqp=CAU",
     "details": "Best food for puppy's. Pure pate with salmon and turkey with no grains."
   }
