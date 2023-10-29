@@ -26,23 +26,17 @@ const cartSlice = createSlice({
     },
     incrementItem(state, action) {
       const id = action.payload;
-
-      state.d = state.d.map((elem) => {
-        if (id === elem.id) {
-          elem.quantity++;
-        }
-        return elem;
-      });
+      const existingItem = state.cartItem.find((item) => item.id === id);
+      if (existingItem) {
+        existingItem.quantity += 1;
+      }
     },
     decrementItem(state, action) {
       const id = action.payload;
-
-      state.d = state.cartItem.map((elem) => {
-        if (id === elem.id) {
-          if (elem.quantity > 1) elem.quantity--;
-        }
-        return elem;
-      });
+      const existingItem = state.cartItem.find((item) => item.id === id);
+      if (existingItem && existingItem.quantity > 1) {
+        existingItem.quantity -= 1;
+      }
     },
     deleteItem(state, action) {
       const id = action.payload;
