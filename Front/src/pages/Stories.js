@@ -9,14 +9,14 @@ function Stories() {
     <div>
       <h1>Happy Adoption Stories</h1>
       <Carousel interval={carouselInterval}>
-        {stories.map((story, index) => (
+        {stories.map((story) => (
           <Carousel.Item key={story.id}>
             <div className="d-flex">
               <img
                 className="d-block w-50"
                 src={story.image}
                 alt={story.name}
-                style={{ objectFit: "cover", maxHeight: "500px" }}
+                style={{ objectFit: "cover", maxHeight: "550px" }}
               />
 
               <div className="d-flex flex-column justify-content-center w-50 p-4 carouselStory">
@@ -39,11 +39,13 @@ function Stories() {
             key={story.id}
             style={{ flex: "1 0 21%" }}
           >
-            <img
-              src={story.image}
-              className="card-img-top m-1 p-2 cardImage"
-              alt={story.name}
-            />
+            
+              <img
+                src={story.image}
+                className="card-img-top m-1 p-2 cardImage"
+                alt={story.name}
+              />
+          
             <div className="card-body-story">
               <h5 className="card-title">{story.name}</h5>
               <p className="card-text-story">

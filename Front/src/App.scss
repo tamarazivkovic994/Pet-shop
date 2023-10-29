@@ -183,6 +183,11 @@ $lightBrown: #a49794;
   flex-direction: column;
   background-color: $babyPink;
 }
+.cardImage {
+  height: 60%;
+  border-radius: 20px;
+  object-fit: cover;
+}
 
 .card-text-story {
   flex-grow: 1;

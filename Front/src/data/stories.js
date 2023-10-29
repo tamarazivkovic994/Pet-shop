@@ -1,7 +1,7 @@
 const storiesData = [
   {
     id: 1,
-    image: "./images/dog1.JPG", 
+    image: "./images/dog1.JPG",
     name: "Buddy",
     age: "2 years",
     story:
@@ -10,7 +10,7 @@ const storiesData = [
   },
   {
     id: 2,
-    image: "./images/dog2.JPG", 
+    image: "./images/dog2.JPG",
     name: "Luna",
     age: "3 years",
     story:
@@ -19,7 +19,7 @@ const storiesData = [
   },
   {
     id: 3,
-    image: "./images/dog10.JPG", 
+    image: "./images/dog10.JPG",
     name: "Oscar",
     age: "7 years",
     story:
@@ -28,7 +28,7 @@ const storiesData = [
   },
   {
     id: 4,
-    image: "./images/dog4.JPG", 
+    image: "./images/dog4.JPG",
     name: "Max",
     age: "4 years",
     story:
@@ -37,7 +37,7 @@ const storiesData = [
   },
   {
     id: 5,
-    image: "./images/dog5.JPG", 
+    image: "./images/dog5.JPG",
     name: "Charlie",
     age: "5 months",
     story:
@@ -46,7 +46,7 @@ const storiesData = [
   },
   {
     id: 6,
-    image: "./images/dog6.JPG", 
+    image: "./images/dog6.JPG",
     name: "Milo",
     age: "6 years",
     story:
@@ -55,7 +55,7 @@ const storiesData = [
   },
   {
     id: 7,
-    image: "./images/dog7.JPG", 
+    image: "./images/dog7.JPG",
     name: "Stella",
     age: "2 years",
     story:
@@ -64,7 +64,7 @@ const storiesData = [
   },
   {
     id: 8,
-    image: "./images/dog8.JPG", 
+    image: "./images/dog8.JPG",
     name: "Cooper",
     age: "3 years",
     story:
@@ -73,7 +73,7 @@ const storiesData = [
   },
   {
     id: 9,
-    image: "./images/dog9.JPG", 
+    image: "./images/dog9.JPG",
     name: "Daisy",
     age: "4 months",
     story:
@@ -82,12 +82,30 @@ const storiesData = [
   },
   {
     id: 10,
-    image: "./images/dog3.JPG", 
+    image: "./images/dog3.JPG",
     name: "Bella",
     age: "1 year",
     story:
       "Found in an abandoned warehouse, Bella is now the beloved guardian of her new family.",
     contributor: "Martin Stern",
+  },
+  {
+    id: 11,
+    image: "./images/dog9.JPG",
+    name: "Rusty",
+    age: "2 years",
+    story:
+      "Once a shy, timid dog, Rusty discovered a love for play and adventure with his new family.",
+    contributor: "James P.",
+  },
+  {
+    id: 12,
+    image: "./images/dog3.JPG",
+    name: "Princess",
+    age: "5 year",
+    story:
+      "Princess was the smallest in her litter and faced health issues early on, but that never dampened her spirit. ",
+    contributor: "Sarah and Anthony G.",
   },
 ];
 
