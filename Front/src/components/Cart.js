@@ -7,6 +7,7 @@ import {
   incrementItem,
   decrementItem,
   deleteItem,
+  deleteAll,
 } from "../redux/features/cartSlice";
 
 const Cart = () => {
@@ -26,13 +27,15 @@ const Cart = () => {
   const handleDelete = (id) => {
     dispatch(deleteItem(id));
   };
-
+  const handleDeleteAll = () => {
+    dispatch(deleteAll());
+  };
   const handleCloseCart = () => {
     navigate("/shop");
   };
 
   const totalCost = cartItem.reduce(
-    (total, item) => total + item.price * item.quantity,
+    (acc, num) => acc + num.price * num.quantity,
     0
   );
   console.log(totalCost);
@@ -83,8 +86,11 @@ const Cart = () => {
               </MDBCol>
             ))}
           </MDBRow>
-          <div className="total-amount d-flex justify-content-center m-2">
+          <div className="total-amount d-flex justify-content-center m-3 p-3 gap-2">
             <h4>Total Amount: ${totalCost.toFixed(2)}</h4>
+            <MDBBtn onClick={handleDeleteAll} color="dark">
+              Delete All
+            </MDBBtn>
           </div>
         </>
       ) : (
