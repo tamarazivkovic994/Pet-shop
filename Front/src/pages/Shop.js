@@ -1,11 +1,14 @@
 import React, { useState } from "react";
+import { useDispatch } from "react-redux";
 import { MDBCardGroup, MDBCard, MDBBtn } from "mdb-react-ui-kit";
 import items from "../data/items.json";
+import { addItem } from "../redux/features/cartSlice";
 
-const Shop = ({ cart, setCart }) => {
+const Shop = () => {
   const [searchQuery, setSearchQuery] = useState("");
   const [filteredItems, setFilteredItems] = useState(items);
   const [itemsToShow, setItemsToShow] = useState(8);
+  const dispatch = useDispatch();
 
   const handleSearch = (query) => {
     setSearchQuery(query);
@@ -16,7 +19,7 @@ const Shop = ({ cart, setCart }) => {
   };
 
   const handleAddToCart = (item) => {
-    setCart([...cart, item]);
+   dispatch(addItem(item));
   };
 
   const loadMore = () => {

@@ -27,6 +27,7 @@ export default function Header({ cart }) {
     dispatch(toggleCart(open));
   };
 
+  const { cartItem } = useSelector((state) => state.cart);
   const { user } = useSelector((state) => ({ ...state.auth }));
 
   return (
@@ -101,8 +102,8 @@ export default function Header({ cart }) {
                     onClick={() => handleOpenCart(true)}
                   >
                     <i className="fas fa-shopping-cart"></i>
-                    {cart.length > 0 && (
-                      <span className="cart-count">{cart.length}</span>
+                    {cartItem.length > 0 && (
+                      <span className="cart-count">{cartItem.length}</span>
                     )}
                   </MDBNavbarLink>
                 </MDBNavbarItem>
