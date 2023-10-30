@@ -57,6 +57,7 @@ const Cart = () => {
                     src={item.image}
                     className="card-img-top m-1 p-2 cartImage"
                     alt={item.name}
+                    style={{ height: '300px', borderRadius: "10px" }}
                   />
                   <div className="card-body-cart">
                     <h5 className="card-title-cart">{item.name}</h5>

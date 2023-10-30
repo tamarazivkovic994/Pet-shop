@@ -197,7 +197,7 @@ $lightBrown: #a49794;
 
 // Contact page specific styles
 .contactForm {
-  width: 100%;
+  width: 50%;
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
@@ -233,11 +233,11 @@ $lightBrown: #a49794;
   }
 
   .map-container {
-    width: 200px;
+    width: 400px;
     margin-top: 3%;
 
     iframe {
-      width: 200px;
+      width: 400px;
     }
   }
 
@@ -245,11 +245,18 @@ $lightBrown: #a49794;
     width: 100%;
   }
 }
+@media (max-width: 576px) {
+  .row-cols-1.row-cols-md-4.g-3 {
+    flex-direction: column;
 
+    .col {
+      margin: 1%;
+    }
+  }
+}
 .card-body-cart{
   background-color: $babyPink;
 }
-
 .totalPrice{
   display: flex;
   align-items: center;
