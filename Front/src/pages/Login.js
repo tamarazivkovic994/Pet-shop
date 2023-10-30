@@ -45,7 +45,7 @@ const Login = () => {
   };
 
   return (
-    <MDBContainer className="d-flex justify-content-center mt-3 container" style={{ paddingTop: '10%' }}>
+    <MDBContainer className="d-flex justify-content-center mt-3 container" style={{ paddingTop: '10%', paddingBottom: '7.8%' }}>
       <MDBCard alignment="center" className="card-holder">
         <MDBCardHeader className="card-header">Login</MDBCardHeader>
 
