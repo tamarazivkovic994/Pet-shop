@@ -265,3 +265,15 @@ $lightBrown: #a49794;
   font-weight: bold;
   color: $red;
 }
+
+.payment-section{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  width: 60%;
+  height: 100%;
+  padding: 2%;
+  
+}

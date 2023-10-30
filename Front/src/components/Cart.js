@@ -2,7 +2,7 @@ import React from "react";
 import { MDBCard, MDBBtn } from "mdb-react-ui-kit";
 import { useSelector, useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import { MDBRow, MDBCol } from "mdb-react-ui-kit";
+import { MDBRow, MDBCol, MDBInput } from "mdb-react-ui-kit";
 import {
   incrementItem,
   decrementItem,
@@ -44,8 +44,42 @@ const Cart = () => {
   }, 0);
   console.log(totalCost);
 
+  const [cardInfo, setCardInfo] = React.useState({
+    cardNumber: "",
+    expiryDate: "",
+    cvv: "",
+  });
+
+  const handlePaymentInfoChange = (event) => {
+    const { name, value } = event.target;
+    setCardInfo((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+  };
+
+  const handleCheckout = () => {
+    if (!cardInfo.cardNumber.match(/^\d{16}$/)) {
+      alert("Please enter a valid card number.");
+      return;
+    }
+
+    if (!cardInfo.expiryDate.match(/^(0[1-9]|1[0-2])\/\d{2}$/)) {
+      alert("Expiry date should be in MM/YY format.");
+      return;
+    }
+
+    if (!cardInfo.cvv.match(/^\d{3,4}$/)) {
+      alert("Please enter a valid 3 or 4 digit CVV.");
+      return;
+    }
+
+    alert("Payment submitted! ");
+    handleDeleteAll();
+  };
+
   return (
-    <div className="cart-container" style={{ paddingTop: '10%' }}>
+    <div className="cart-container" style={{ paddingTop: "10%" }}>
       <h1>Your Cart</h1>
       {cartItem.length > 0 ? (
         <>
@@ -57,7 +91,7 @@ const Cart = () => {
                     src={item.image}
                     className="card-img-top m-1 p-2 cartImage"
                     alt={item.name}
-                    style={{ height: '300px', borderRadius: "10px" }}
+                    style={{ height: "300px", borderRadius: "10px" }}
                   />
                   <div className="card-body-cart">
                     <h5 className="card-title-cart">{item.name}</h5>
@@ -92,7 +126,7 @@ const Cart = () => {
             ))}
           </MDBRow>
           <div className=" m-3 p-3 gap-2 totalPrice">
-            <p className="card-text">Price: ${totalCost.toFixed(2)}</p>
+            <p className="card-text">Price: $ {totalCost.toFixed(2)}</p>
             <MDBBtn onClick={handleDeleteAll} color="dark">
               Delete All
             </MDBBtn>
@@ -100,6 +134,36 @@ const Cart = () => {
         </>
       ) : (
         <h2>Your cart is empty</h2>
+      )}
+
+      {cartItem.length > 0 && (
+        <div className="payment-section m-3 p-3">
+          <h3>Payment Details</h3>
+          <MDBInput
+            label="Card Number"
+            id="cardNumber"
+            name="cardNumber"
+            onChange={handlePaymentInfoChange}
+            value={cardInfo.cardNumber}
+          />
+          <MDBInput
+            label="Expiry Date (MM/YY)"
+            id="expiryDate"
+            name="expiryDate"
+            onChange={handlePaymentInfoChange}
+            value={cardInfo.expiryDate}
+          />
+          <MDBInput
+            label="CVV"
+            id="cvv"
+            name="cvv"
+            onChange={handlePaymentInfoChange}
+            value={cardInfo.cvv}
+          />
+          <MDBBtn onClick={handleCheckout} color="success">
+            Checkout
+          </MDBBtn>
+        </div>
       )}
       <MDBBtn onClick={handleCloseCart} color="dark">
         Continue Shopping

@@ -91,7 +91,7 @@ const storiesData = [
   },
   {
     id: 11,
-    image: "./images/dog9.JPG",
+    image: "./images/dog11.jpeg",
     name: "Rusty",
     age: "2 years",
     story:
@@ -100,7 +100,7 @@ const storiesData = [
   },
   {
     id: 12,
-    image: "./images/dog3.JPG",
+    image: "./images/dog12.jpeg",
     name: "Princess",
     age: "5 year",
     story:
