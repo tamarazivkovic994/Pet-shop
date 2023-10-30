@@ -2,7 +2,7 @@ import React from "react";
 
 const NotFound = () => {
   return (
-    <div>
+    <div style={{ paddingTop: '10%' }}>
       <img src="/images/404.jpg" alt="Not Found" />
     </div>
   );

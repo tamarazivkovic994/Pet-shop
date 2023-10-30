@@ -48,7 +48,7 @@ const Register = () => {
   };
 
   return (
-    <MDBContainer className="d-flex justify-content-center mt-3 container">
+    <MDBContainer className="d-flex justify-content-center mt-3 container" style={{ paddingTop: '10%' }}>
       <MDBCard alignment="center">
         <h5>Sign Up</h5>
         <MDBCardBody>

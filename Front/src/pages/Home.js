@@ -14,7 +14,7 @@ import SendStory from "../components/SendStory";
 
 const Home = () => {
   return (
-    <MDBContainer className="mt-3">
+    <MDBContainer className="mt-3" style={{ paddingTop: '10%' }}>
       <MDBRow className="justify-content-md-center mb-4">
         <MDBCol md="6">
           <MDBCard className="mb-3">

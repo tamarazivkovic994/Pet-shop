@@ -45,14 +45,14 @@ const Cart = () => {
   console.log(totalCost);
 
   return (
-    <div className="cart-container">
+    <div className="cart-container" style={{ paddingTop: '10%' }}>
       <h1>Your Cart</h1>
       {cartItem.length > 0 ? (
         <>
           <MDBRow className="row-cols-1 row-cols-md-4 g-3">
             {cartItem.map((item) => (
               <MDBCol key={item.id}>
-                <MDBCard className="h-90">
+                <MDBCard className="h-90 cart-card">
                   <img
                     src={item.image}
                     className="card-img-top m-1 p-2 cartImage"
@@ -90,7 +90,7 @@ const Cart = () => {
               </MDBCol>
             ))}
           </MDBRow>
-          <div className="total-amount d-flex justify-content-center m-3 p-3 gap-2">
+          <div className=" m-3 p-3 gap-2 totalPrice">
             <p className="card-text">Price: ${totalCost.toFixed(2)}</p>
             <MDBBtn onClick={handleDeleteAll} color="dark">
               Delete All

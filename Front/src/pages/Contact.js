@@ -53,7 +53,7 @@ const Contact = () => {
       );
   };
   return (
-    <MDBContainer className="d-flex justify-content-center mt-3 container-contactForm">
+    <MDBContainer className="d-flex justify-content-center mt-3 container-contactForm" style={{ paddingTop: '10%' }}>
       <MDBCard alignment="center" className="card-holder contactForm">
         <h5>Contact Us</h5>
         <MDBCardBody className="card-body">

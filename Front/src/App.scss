@@ -21,9 +21,6 @@ $lightBrown: #a49794;
   align-items: center;
   padding: 0 20px;
   height: 10%;
-  position: sticky;
-  top: 0;
-  z-index: 999;
 }
 
 // Main App styling
@@ -247,4 +244,17 @@ $lightBrown: #a49794;
   .contactForm {
     width: 100%;
   }
+}
+
+.card-body-cart{
+  background-color: $babyPink;
+}
+
+.totalPrice{
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  font-size: 35px;
+  font-weight: bold;
+  color: $red;
 }

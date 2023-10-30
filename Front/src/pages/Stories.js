@@ -6,7 +6,7 @@ import Carousel from "react-bootstrap/Carousel";
 function Stories() {
   const carouselInterval = 3000;
   return (
-    <div>
+    <div style={{ paddingTop: '10%' }}>
       <h1>Happy Adoption Stories</h1>
       <Carousel interval={carouselInterval}>
         {stories.map((story) => (

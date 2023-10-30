@@ -31,7 +31,18 @@ export default function Header({ cart }) {
   const { user } = useSelector((state) => ({ ...state.auth }));
 
   return (
-    <MDBNavbar expand="lg" light bgColor="light">
+    <MDBNavbar
+      expand="lg"
+      light
+      bgColor="light"
+      style={{
+        position: "fixed",
+        top: 0,
+        width: "100%",
+        zIndex: 1000,
+        height: "17%",
+      }}
+    >
       <MDBContainer fluid>
         <MDBNavbarBrand href="/" className="icon-header">
           <img

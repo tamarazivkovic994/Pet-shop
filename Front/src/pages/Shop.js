@@ -30,7 +30,7 @@ const Shop = () => {
     <div>
       <div
         className="input-group rounded"
-        style={{ width: "20%", margin: "1%" }}
+        style={{ width: "20%", margin: "1%", paddingTop: '10%' }}
       >
         <input
           type="search"
