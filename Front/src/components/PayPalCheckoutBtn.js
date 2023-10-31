@@ -2,15 +2,17 @@ import { PayPalButtons } from "@paypal/react-paypal-js";
 import { useState, useEffect } from "react";
 
 const PaypalCheckoutButton = (props) => {
-  const { product } = props;
-
   const [paidFor, setPaidFor] = useState(false);
+  const { product, onPaymentSuccess } = props;
   const [error, setError] = useState(null);
-  const totalValue = product.reduce((acc, curr) => acc + Number(curr.price) * Number(curr.quantity), 0);
-
+  const totalValue = product.reduce(
+    (acc, curr) => acc + Number(curr.price) * Number(curr.quantity),
+    0
+  );
 
   const handleApprove = (data, actions) => {
     setPaidFor(true);
+    onPaymentSuccess();
   };
 
   useEffect(() => {
@@ -18,7 +20,7 @@ const PaypalCheckoutButton = (props) => {
       alert("Payment Successful");
     }
   }, [paidFor]);
-  
+
   if (error) {
     alert("Payment Failed");
   }
@@ -43,6 +45,12 @@ const PaypalCheckoutButton = (props) => {
           return actions.resolve();
         }
       }}
+      onApprove={async (data, actions) => {
+        const order = await actions.order.capture();
+        console.log("order", order);
+
+        handleApprove(data.orderID);
+      }}
       createOrder={(data, actions) => {
         return actions.order.create({
           purchase_units: [
@@ -54,12 +62,6 @@ const PaypalCheckoutButton = (props) => {
             },
           ],
         });
-      }}
-      onApprove={async (data, actions) => {
-        const order = await actions.order.capture();
-        console.log("order", order);
-
-        handleApprove(data.orderID);
       }}
       onCancel={() => {
         //   console.log("PayPal checkout cancel");

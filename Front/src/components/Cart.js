@@ -45,6 +45,10 @@ const Cart = () => {
   }, 0);
   console.log(totalCost);
 
+  const handlePaymentSuccess = () => {
+    handleDeleteAll();
+  };
+
   return (
     <div className="cart-container" style={{ paddingTop: "10%" }}>
       <h1>Your Cart</h1>
@@ -103,8 +107,19 @@ const Cart = () => {
       )}
 
       <h2>Payment</h2>
-      <div className="paypal-button" style={{ display:'flex', justifyContent: 'center', alignItems:'center',paddingBottom:'2%'}}>
-        <PaypalCheckoutButton product={cartItem} />
+      <div
+        className="paypal-button"
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          paddingBottom: "2%",
+        }}
+      >
+        <PaypalCheckoutButton
+          product={cartItem}
+          onPaymentSuccess={handlePaymentSuccess}
+        />
       </div>
 
       <MDBBtn onClick={handleCloseCart} color="dark">
