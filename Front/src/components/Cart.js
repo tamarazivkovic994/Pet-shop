@@ -45,40 +45,6 @@ const Cart = () => {
   }, 0);
   console.log(totalCost);
 
-  const [cardInfo, setCardInfo] = React.useState({
-    cardNumber: "",
-    expiryDate: "",
-    cvv: "",
-  });
-
-  const handlePaymentInfoChange = (event) => {
-    const { name, value } = event.target;
-    setCardInfo((prev) => ({
-      ...prev,
-      [name]: value,
-    }));
-  };
-
-  const handleCheckout = () => {
-    if (!cardInfo.cardNumber.match(/^\d{16}$/)) {
-      alert("Please enter a valid card number.");
-      return;
-    }
-
-    if (!cardInfo.expiryDate.match(/^(0[1-9]|1[0-2])\/\d{2}$/)) {
-      alert("Expiry date should be in MM/YY format.");
-      return;
-    }
-
-    if (!cardInfo.cvv.match(/^\d{3,4}$/)) {
-      alert("Please enter a valid 3 or 4 digit CVV.");
-      return;
-    }
-
-    alert("Payment submitted! ");
-    handleDeleteAll();
-  };
-
   return (
     <div className="cart-container" style={{ paddingTop: "10%" }}>
       <h1>Your Cart</h1>
