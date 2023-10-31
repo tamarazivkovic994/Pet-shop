@@ -2,13 +2,14 @@ import React from "react";
 import { MDBCard, MDBBtn } from "mdb-react-ui-kit";
 import { useSelector, useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import { MDBRow, MDBCol, MDBInput } from "mdb-react-ui-kit";
+import { MDBRow, MDBCol } from "mdb-react-ui-kit";
 import {
   incrementItem,
   decrementItem,
   deleteItem,
   deleteAll,
 } from "../redux/features/cartSlice";
+import PaypalCheckoutButton from "../components/PayPalCheckoutBtn";
 
 const Cart = () => {
   const { cartItem } = useSelector((state) => state.cart);
@@ -136,35 +137,11 @@ const Cart = () => {
         <h2>Your cart is empty</h2>
       )}
 
-      {cartItem.length > 0 && (
-        <div className="payment-section m-3 p-3">
-          <h3>Payment Details</h3>
-          <MDBInput
-            label="Card Number"
-            id="cardNumber"
-            name="cardNumber"
-            onChange={handlePaymentInfoChange}
-            value={cardInfo.cardNumber}
-          />
-          <MDBInput
-            label="Expiry Date (MM/YY)"
-            id="expiryDate"
-            name="expiryDate"
-            onChange={handlePaymentInfoChange}
-            value={cardInfo.expiryDate}
-          />
-          <MDBInput
-            label="CVV"
-            id="cvv"
-            name="cvv"
-            onChange={handlePaymentInfoChange}
-            value={cardInfo.cvv}
-          />
-          <MDBBtn onClick={handleCheckout} color="success">
-            Checkout
-          </MDBBtn>
-        </div>
-      )}
+      <h2>Payment</h2>
+      <div className="paypal-button" style={{ display:'flex', justifyContent: 'center', alignItems:'center',paddingBottom:'2%'}}>
+        <PaypalCheckoutButton product={cartItem} />
+      </div>
+
       <MDBBtn onClick={handleCloseCart} color="dark">
         Continue Shopping
       </MDBBtn>
