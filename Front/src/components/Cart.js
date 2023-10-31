@@ -50,7 +50,7 @@ const Cart = () => {
   };
 
   return (
-    <div className="cart-container" style={{ paddingTop: "10%" }}>
+    <div className="cart-container" style={{ paddingTop: "10%",margin:'1%' }}>
       <h1>Your Cart</h1>
       {cartItem.length > 0 ? (
         <>
@@ -101,26 +101,26 @@ const Cart = () => {
               Delete All
             </MDBBtn>
           </div>
+
+          <h2>Payment</h2>
+          <div
+            className="paypal-button"
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              paddingBottom: "2%",
+            }}
+          >
+            <PaypalCheckoutButton
+              product={cartItem}
+              onPaymentSuccess={handlePaymentSuccess}
+            />
+          </div>
         </>
       ) : (
-        <h2>Your cart is empty</h2>
+        <h2 style={{ paddingBottom: "12%" }}>Your cart is empty</h2>
       )}
-
-      <h2>Payment</h2>
-      <div
-        className="paypal-button"
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          paddingBottom: "2%",
-        }}
-      >
-        <PaypalCheckoutButton
-          product={cartItem}
-          onPaymentSuccess={handlePaymentSuccess}
-        />
-      </div>
 
       <MDBBtn onClick={handleCloseCart} color="dark">
         Continue Shopping
