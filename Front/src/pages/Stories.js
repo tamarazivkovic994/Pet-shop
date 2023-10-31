@@ -8,7 +8,7 @@ function Stories() {
   return (
     <div style={{ paddingTop: '10%' }}>
       <h1>Happy Adoption Stories</h1>
-      <Carousel interval={carouselInterval}>
+      <Carousel interval={carouselInterval} style={{display:'flex', justifyContent:'center', alignItems:'center'}}>
         {stories.map((story) => (
           <Carousel.Item key={story.id}>
             <div className="d-flex">
@@ -16,7 +16,7 @@ function Stories() {
                 className="d-block w-50"
                 src={story.image}
                 alt={story.name}
-                style={{ objectFit: "cover", maxHeight: "550px" }}
+                style={{ objectFit: "contain", maxHeight: '500px' }} 
               />
 
               <div className="d-flex flex-column justify-content-center w-50 p-4 carouselStory">
